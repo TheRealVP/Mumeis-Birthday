@@ -1,0 +1,72 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://assets/enemies/nightmare_5.png" type="Texture" id=1]
+[ext_resource path="res://assets/enemies/nightmare_3.png" type="Texture" id=2]
+[ext_resource path="res://assets/enemies/slimeBlue_squashed.png" type="Texture" id=3]
+[ext_resource path="res://enemy.gd" type="Script" id=4]
+[ext_resource path="res://assets/enemies/nightmare_4.png" type="Texture" id=5]
+[ext_resource path="res://assets/enemies/nightmare_1.png" type="Texture" id=6]
+[ext_resource path="res://assets/enemies/nightmare_2.png" type="Texture" id=7]
+[ext_resource path="res://assets/enemies/nightmare_6.png" type="Texture" id=8]
+[ext_resource path="res://assets/enemies/nightmare_8.png" type="Texture" id=9]
+[ext_resource path="res://assets/enemies/nightmare_7.png" type="Texture" id=10]
+[ext_resource path="res://assets/enemies/nightmare_10.png" type="Texture" id=11]
+[ext_resource path="res://assets/enemies/nightmare_9.png" type="Texture" id=12]
+[ext_resource path="res://assets/enemies/nightmare_12.png" type="Texture" id=13]
+[ext_resource path="res://assets/enemies/nightmare_11.png" type="Texture" id=14]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "crawl",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "squish",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 16.5, 26.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 26, 0.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 28.5, 10 )
+
+[node name="enemy" type="KinematicBody2D"]
+collision_layer = 8
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "crawl"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, 0.5 )
+rotation = 1.5708
+shape = SubResource( 3 )
+
+[node name="floor_checker" type="RayCast2D" parent="."]
+scale = Vector2( 1, 0.5 )
+enabled = true
+
+[node name="top_checker" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top_checker"]
+position = Vector2( -1, -17.5 )
+shape = SubResource( 4 )
+
+[node name="sides_checker" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sides_checker"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="top_checker" to="." method="_on_top_checker_body_entered"]
+[connection signal="body_entered" from="sides_checker" to="." method="_on_sides_checker_body_entered"]
