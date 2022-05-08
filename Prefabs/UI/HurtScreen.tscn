@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Hurt"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.501961, 0.0313726, 0.0313726, 0 ), Color( 0.501961, 0.0313726, 0.0313726, 0.262745 ), Color( 0.501961, 0.0313726, 0.0313726, 0.572549 ), Color( 0.501961, 0.0313726, 0.0313726, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.501961, 0.0313726, 0.0313726, 0 ) ]
+}
+
+[node name="HurtScreen" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -455.0
+margin_top = -245.0
+margin_right = 1465.0
+margin_bottom = 835.0
+rect_pivot_offset = Vector2( 960, 540 )
+color = Color( 0.501961, 0.0313726, 0.0313726, 0 )
+
+[node name="anim" type="AnimationPlayer" parent="."]
+autoplay = "Hurt"
+anims/Hurt = SubResource( 1 )
+anims/RESET = SubResource( 2 )
