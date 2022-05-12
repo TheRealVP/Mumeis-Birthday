@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 
 # Declare member variables here. Examples:
@@ -8,14 +8,14 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(PlayerVariables.exit_point)
-	if PlayerVariables.exit_point==1:
-		$Player.global_position= $exitpoint1.global_position
-	elif PlayerVariables.exit_point==2:
-		$Player.global_position= $exitpoint2.global_position
-	
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_SecretArea_body_entered(body):
+	if body.name == "Player":
+		PlayerVariables.goto_scene("res://Prefabs/Levels/Level2_0.tscn" ) # Replace with function body.

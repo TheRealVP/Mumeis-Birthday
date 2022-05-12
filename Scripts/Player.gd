@@ -44,7 +44,7 @@ func _process(delta):
 		if velocity.x !=0 and velocity.y == 0:
 			$anim.play("Walk")
 		elif velocity.x ==0 and velocity.y < 0 and canSlash==false:
-			print("JUMPING")
+			#print("JUMPING")
 			if jumpCount==2:
 				$anim.play("DoubleJump")
 			else:
@@ -55,7 +55,7 @@ func _process(delta):
 			$anim.play("Swoop")
 	
 	elif movement == 0 and canSlash==false:
-		print("IDLING")
+		#print("IDLING")
 		velocity.x= lerp(velocity.x, 0, FRICTION)
 		if velocity.y==0:
 			$anim.play("Idle")
@@ -96,13 +96,13 @@ func _process(delta):
 		else:
 			$anim.play("Jump")
 	elif velocity.y < 0 and velocity.x != 0  and canSlash==false:
-		print("JUMPING")
+		#print("JUMPING")
 		if jumpCount==2:
 			$anim.play("DoubleJump")
 		else:
 			$anim.play("Jump")
 	elif velocity.y > 30 and velocity.x != 0  and isSwooping == false and canSlash==false:
-		print("FALLING")
+		#print("FALLING")
 		$anim.play("Fall")
 		
 	if Input.is_action_just_pressed("ui_sword") and isSwooping==false:
