@@ -1,0 +1,176 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://1 - Player/MumeiSword/sword4.png" type="Texture" id=1]
+[ext_resource path="res://1 - Player/Jump and fall/jump7_2.png" type="Texture" id=2]
+[ext_resource path="res://6 - UI/JungleAdventurer.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://1 - Player/Jump and fall/jump3.png" type="Texture" id=4]
+[ext_resource path="res://1 - Player/MumeiFly/fly2.png" type="Texture" id=5]
+[ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=6]
+[ext_resource path="res://0 - AsepriteFiles/nightmarebunkeronii.jpg" type="Texture" id=7]
+[ext_resource path="res://Prefabs/Menus/Back.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:vframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "play"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0.266667, 0.266667, 0.266667, 1 )
+margin_right = 1022.0
+margin_bottom = 598.0
+texture = ExtResource( 7 )
+expand = true
+
+[node name="Sword4" type="Sprite" parent="."]
+position = Vector2( 75.5, 64 )
+scale = Vector2( 0.438461, 0.466667 )
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 160.0
+margin_top = 28.9999
+margin_right = 586.0
+margin_bottom = 116.0
+custom_fonts/font = SubResource( 1 )
+text = "Press Z to swing Mumei's dagger. It's a short weapon
+so you're going to need to get very up close and personal!
+"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 449.0
+margin_top = 101.5
+margin_right = 869.0
+margin_bottom = 188.5
+custom_fonts/font = SubResource( 1 )
+text = "Press Space to jump. Jumping has many uses, like getting
+on top of places and dodging attacks.
+"
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 183.0
+margin_top = 208.0
+margin_right = 603.0
+margin_bottom = 305.0
+custom_fonts/font = SubResource( 1 )
+text = "Double tap the space bar to perform a double jump. 
+Double jumping has as many uses as regular jumping!
+The faster you double tap, the higher you jump! You can
+Even control a fall a little bit with it.
+"
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 119.0
+margin_top = 452.0
+margin_right = 539.0
+margin_bottom = 549.0
+custom_fonts/font = SubResource( 1 )
+text = "Admit it, you were expecting berries in this game. 
+You will slowly regenerate health as long as you have 
+berries collected. Very useful when you fail to jump!"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 452.0
+margin_top = 313.351
+margin_right = 872.0
+margin_bottom = 410.351
+custom_fonts/font = SubResource( 1 )
+text = "You can perform a swoop attack mid-jump that deals
+extra damage and makes you move faster. But be careful,
+ if you don't beat your enemyin one blow you'll leave 
+yourself vulnerable!
+"
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 601.0
+margin_top = 447.0
+margin_right = 1021.0
+margin_bottom = 544.0
+custom_fonts/font = SubResource( 1 )
+text = "Oh, and use the left and right arrow keys to move
+ left and right."
+
+[node name="Jump72" type="Sprite" parent="."]
+position = Vector2( 937, 351 )
+scale = Vector2( 0.453846, 0.452426 )
+texture = ExtResource( 2 )
+
+[node name="Jump3" type="Sprite" parent="."]
+position = Vector2( 950, 119.5 )
+scale = Vector2( 0.584615, 0.515385 )
+texture = ExtResource( 4 )
+
+[node name="Fly2" type="Sprite" parent="."]
+position = Vector2( 95, 246 )
+scale = Vector2( 0.520513, 0.502564 )
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 75.5, 472 )
+scale = Vector2( 2.125, 2.16667 )
+texture = ExtResource( 6 )
+hframes = 6
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+autoplay = "play"
+anims/RESET = SubResource( 2 )
+anims/play = SubResource( 3 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 812.0
+margin_top = 523.0
+margin_right = 904.0
+margin_bottom = 556.0
+custom_fonts/font = SubResource( 4 )
+text = "Back"
+script = ExtResource( 8 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

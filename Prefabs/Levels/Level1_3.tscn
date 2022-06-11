@@ -593,12 +593,12 @@ spawnPoint = 2
 
 [node name="SimpleDoor2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 30, 164 )
-level = "1_2"
+level = "1_4"
 open = true
 
 [node name="SimpleDoor3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 434, 164 )
-level = "1_3"
+level = "1_4"
 open = true
 
 [node name="Midground" type="TileMap" parent="."]

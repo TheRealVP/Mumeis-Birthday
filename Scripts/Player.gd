@@ -43,6 +43,8 @@ func _process(delta):
 			$Sword.position.x = 2 
 		if velocity.x !=0 and velocity.y == 0:
 			$anim.play("Walk")
+		elif velocity.y < 0 and canSlash==false and isSwooping==true:
+			$anim.play("Swoop")
 		elif velocity.x ==0 and velocity.y < 0 and canSlash==false:
 			#print("JUMPING")
 			if jumpCount==2:
@@ -61,8 +63,9 @@ func _process(delta):
 			$anim.play("Idle")
 		
 	#DEATH FALL
-	if velocity.y > 350:
-		get_tree().reload_current_scene()
+	#going to rethink this one
+	#if velocity.y > 350:
+	#	get_tree().reload_current_scene()
 		
 	#DOUBLE JUMP
 	if is_on_floor():
@@ -126,7 +129,7 @@ func hurt(damage):
 	var red = hurtScreen.instance()
 	add_child(red)
 	if lives <=0 :
-		get_tree().reload_current_scene()
+		PlayerVariables.goto_scene("res://Prefabs/Menus/GameOver.tscn" )
 	if velocity.x >=0:
 		velocity.y=-73
 		velocity.x=-53

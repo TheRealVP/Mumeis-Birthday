@@ -11,7 +11,8 @@ config_version=4
 [application]
 
 config/name="GD Platformer"
-run/main_scene="res://Prefabs/Levels/Level0.tscn"
+config/description="https://www.1001fonts.com/jungle-adventurer-font.html#license"
+run/main_scene="res://Prefabs/Menus/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
