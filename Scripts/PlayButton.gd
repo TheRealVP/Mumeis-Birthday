@@ -17,5 +17,7 @@ func _ready():
 
 
 func _on_Button_pressed():
+	PlayerVariables.set_lives(3)
+	PlayerVariables.set_berries(0)
 	PlayerVariables.goto_scene("res://Prefabs/Levels/Level0.tscn" ) # Replace with function body.
 

@@ -43,8 +43,6 @@ func _process(delta):
 			$Sword.position.x = 2 
 		if velocity.x !=0 and velocity.y == 0:
 			$anim.play("Walk")
-		elif velocity.y < 0 and canSlash==false and isSwooping==true:
-			$anim.play("Swoop")
 		elif velocity.x ==0 and velocity.y < 0 and canSlash==false:
 			#print("JUMPING")
 			if jumpCount==2:
