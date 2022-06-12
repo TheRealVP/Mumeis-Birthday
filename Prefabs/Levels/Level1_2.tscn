@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://3 - Background and Tiles/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -7,7 +7,9 @@
 [ext_resource path="res://3 - Background and Tiles/Background.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/SecretArea.gd" type="Script" id=6]
 [ext_resource path="res://3 - Background and Tiles/ForgottenDungeon.png" type="Texture" id=7]
+[ext_resource path="res://Prefabs/Levels/zetanote.gd" type="Script" id=8]
 [ext_resource path="res://Prefabs/Nightmare/Nightmare.tscn" type="PackedScene" id=9]
+[ext_resource path="res://8 - Texture/zetareport.png" type="Texture" id=10]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=14]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
@@ -276,6 +278,8 @@ points = PoolVector2Array( 17, 17, 0, 17, 0, 0, 17, 0 )
 [sub_resource type="RectangleShape2D" id=48]
 extents = Vector2( 15.5, 10 )
 
+[sub_resource type="RectangleShape2D" id=49]
+
 [node name="Level1_2" type="Node2D"]
 position = Vector2( 312, 214 )
 
@@ -375,12 +379,6 @@ position = Vector2( -32, 103 )
 [node name="Coin3" parent="." instance=ExtResource( 3 )]
 position = Vector2( -12, 103 )
 
-[node name="Coin4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 8, 103 )
-
-[node name="Coin5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 8, 84 )
-
 [node name="Coin6" parent="." instance=ExtResource( 3 )]
 position = Vector2( -12, 84 )
 
@@ -390,4 +388,20 @@ position = Vector2( -32, 84 )
 [node name="Coin8" parent="." instance=ExtResource( 3 )]
 position = Vector2( -52, 84 )
 
+[node name="zetanote" type="Area2D" parent="."]
+position = Vector2( -178, 148 )
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zetanote"]
+shape = SubResource( 49 )
+
+[node name="report" type="Sprite" parent="zetanote"]
+visible = false
+position = Vector2( 175, -104 )
+scale = Vector2( 0.0974909, 0.090935 )
+z_index = 8
+texture = ExtResource( 10 )
+
 [connection signal="body_entered" from="SecretArea" to="SecretArea" method="_on_SecretArea_body_entered"]
+[connection signal="body_entered" from="zetanote" to="zetanote" method="_on_zetanote_body_entered"]
+[connection signal="body_exited" from="zetanote" to="zetanote" method="_on_zetanote_body_exited"]

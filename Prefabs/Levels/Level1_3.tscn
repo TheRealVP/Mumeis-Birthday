@@ -638,6 +638,9 @@ scale = Vector2( 2, 2 )
 [node name="exitpoint1" type="Position2D" parent="."]
 position = Vector2( 29, 170 )
 
+[node name="exitpoint4" type="Position2D" parent="."]
+position = Vector2( -215, 171 )
+
 [node name="exitpoint2" type="Position2D" parent="."]
 position = Vector2( 433, 172 )
 

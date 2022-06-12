@@ -349,6 +349,7 @@ position = Vector2( -4, 151 )
 [node name="SimpleDoor" parent="." instance=ExtResource( 4 )]
 position = Vector2( 145, 132 )
 level = "1_1"
+spawnPoint = 3
 
 [node name="BackgroundMap" type="TileMap" parent="."]
 z_index = -3

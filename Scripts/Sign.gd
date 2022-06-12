@@ -17,8 +17,10 @@ func _ready():
 
 
 func _on_Sign_body_entered(body):
-	$signtext.text= signtext # Replace with function body.
+	if body.name=="Player":
+		$signtext.text= signtext # Replace with function body.
 
 
 func _on_Sign_body_exited(body):
-	$signtext.text= "" # Replace with function body.
+	if body.name=="Player":
+		$signtext.text= "" # Replace with function body.

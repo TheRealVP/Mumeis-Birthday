@@ -15,6 +15,8 @@ func _ready():
 		$Player.global_position= $exitpoint2.global_position
 	elif PlayerVariables.exit_point==3:
 		$Player.global_position= $exitpoint3.global_position
+	elif PlayerVariables.exit_point==4:
+		$Player.global_position= $exitpoint4.global_position
 	
 
 
