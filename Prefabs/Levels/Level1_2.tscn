@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://3 - Background and Tiles/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Prefabs/Levels/zetanote.gd" type="Script" id=8]
 [ext_resource path="res://Prefabs/Nightmare/Nightmare.tscn" type="PackedScene" id=9]
 [ext_resource path="res://8 - Texture/zetareport.png" type="Texture" id=10]
+[ext_resource path="res://7 - Interactables/zecretarysmol.png" type="Texture" id=11]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=14]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
@@ -401,6 +402,11 @@ position = Vector2( 175, -104 )
 scale = Vector2( 0.0974909, 0.090935 )
 z_index = 8
 texture = ExtResource( 10 )
+
+[node name="icon" type="Sprite" parent="zetanote"]
+position = Vector2( 0, 3 )
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 11 )
 
 [connection signal="body_entered" from="SecretArea" to="SecretArea" method="_on_SecretArea_body_entered"]
 [connection signal="body_entered" from="zetanote" to="zetanote" method="_on_zetanote_body_entered"]
