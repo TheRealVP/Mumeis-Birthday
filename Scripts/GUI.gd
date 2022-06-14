@@ -29,3 +29,7 @@ func _process(delta):
 			heart.frame = (player.lives - lastHeart) * 4
 		if index < lastHeart:
 			heart.frame= 4
+
+
+func _on_GiantOllie_ollie_is_hit():
+	$BossProgressBar.value-=1 # Replace with function body.

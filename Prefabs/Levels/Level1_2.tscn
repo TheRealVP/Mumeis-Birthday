@@ -398,8 +398,8 @@ shape = SubResource( 49 )
 
 [node name="report" type="Sprite" parent="zetanote"]
 visible = false
-position = Vector2( 175, -104 )
-scale = Vector2( 0.0974909, 0.090935 )
+position = Vector2( 146, -104 )
+scale = Vector2( 0.109205, 0.0974914 )
 z_index = 8
 texture = ExtResource( 10 )
 
