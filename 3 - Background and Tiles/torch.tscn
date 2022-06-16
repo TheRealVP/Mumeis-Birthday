@@ -1,0 +1,22 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://3 - Background and Tiles/Medieval_Castle_Asset_Pack/Decorations/Animated Decorations/torch_small/torch_small_4.png" type="Texture" id=2]
+[ext_resource path="res://3 - Background and Tiles/Medieval_Castle_Asset_Pack/Decorations/Animated Decorations/torch_small/torch_small_6.png" type="Texture" id=3]
+[ext_resource path="res://3 - Background and Tiles/Medieval_Castle_Asset_Pack/Decorations/Animated Decorations/torch_small/torch_small_5.png" type="Texture" id=4]
+[ext_resource path="res://3 - Background and Tiles/Medieval_Castle_Asset_Pack/Decorations/Animated Decorations/torch_small/torch_small_3.png" type="Texture" id=5]
+[ext_resource path="res://3 - Background and Tiles/Medieval_Castle_Asset_Pack/Decorations/Animated Decorations/torch_small/torch_small_2.png" type="Texture" id=6]
+[ext_resource path="res://3 - Background and Tiles/Medieval_Castle_Asset_Pack/Decorations/Animated Decorations/torch_small/torch_small_1.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="torch" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+playing = true

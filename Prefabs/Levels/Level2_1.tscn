@@ -350,7 +350,7 @@ position = Vector2( -220, 163 )
 position = Vector2( 1751, 148 )
 level = "2_2"
 open = true
-spawnPoint = 1
+spawnPoint = 3
 
 [node name="BackgroundMap" type="TileMap" parent="."]
 z_index = -3

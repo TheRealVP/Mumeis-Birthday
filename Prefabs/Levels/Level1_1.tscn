@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://3 - Background and Tiles/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://3 - Background and Tiles/ForgottenDungeon.png" type="Texture" id=7]
 [ext_resource path="res://Prefabs/Enemy/pathPoint.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Enemy/Enemy1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://3 - Background and Tiles/torch.tscn" type="PackedScene" id=10]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=14]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
@@ -412,3 +413,15 @@ position = Vector2( -217, 175 )
 [node name="pathPoint2" parent="." groups=["Pathpoint"] instance=ExtResource( 8 )]
 position = Vector2( -233, 182 )
 scale = Vector2( 2, 2 )
+
+[node name="torch" parent="." instance=ExtResource( 10 )]
+position = Vector2( -106, 154 )
+
+[node name="torch2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 112, 154 )
+
+[node name="torch3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 354, 154 )
+
+[node name="torch4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 650, 200 )
