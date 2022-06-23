@@ -367,7 +367,7 @@ open = true
 
 [node name="SimpleDoor3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 272, 164 )
-level = "1_3"
+level = "3_4"
 open = true
 spawnPoint = 4
 

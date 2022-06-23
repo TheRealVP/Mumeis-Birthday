@@ -395,4 +395,5 @@ scale = Vector2( 2, 2 )
 position = Vector2( -289, 145 )
 scale = Vector2( 2, 2 )
 
+[connection signal="ollie_is_dead" from="GiantOllie" to="BossDoor" method="_on_GiantOllie_ollie_is_dead"]
 [connection signal="ollie_is_hit" from="GiantOllie" to="GUI" method="_on_GiantOllie_ollie_is_hit"]

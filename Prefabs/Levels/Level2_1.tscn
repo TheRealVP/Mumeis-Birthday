@@ -1,14 +1,16 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://3 - Background and Tiles/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Bird/Bird.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Door/SimpleDoor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Sign/Sign.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/Level1_1.gd" type="Script" id=6]
 [ext_resource path="res://3 - Background and Tiles/ForgottenDungeon.png" type="Texture" id=7]
 [ext_resource path="res://Prefabs/Enemy/pathPoint.tscn" type="PackedScene" id=8]
 [ext_resource path="res://5 - Hazards/MetalSpike/MetalSpike.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Nightmare/Nightmare.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Door/BonusLevel1Door.gd" type="Script" id=11]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=14]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
@@ -600,3 +602,12 @@ scale = Vector2( 0.4, 0.4 )
 
 [node name="exitpoint1" type="Position2D" parent="."]
 position = Vector2( -218, 171 )
+
+[node name="SimpleDoor3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1369, 484 )
+script = ExtResource( 11 )
+
+[node name="Sign3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1369, 437 )
+z_index = 4
+signtext = "Anon's 1st Level"

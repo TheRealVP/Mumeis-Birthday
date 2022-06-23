@@ -19,3 +19,8 @@ func _ready():
 func _on_SpeechArea_body_entered(body):
 	if body.name=="Player": # Replace with function body.
 		$FaunaSpeech.text="Mumei no! If you leave\n the Bunkeronii time will rewind!" # Replace with function body.
+
+
+func _on_SpeechArea_body_exited(body):
+	if body.name=="Player": # Replace with function body.
+		$FaunaSpeech.text="Good luck, Mumei.." # Replace with function body.

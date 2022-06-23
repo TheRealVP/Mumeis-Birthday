@@ -349,7 +349,6 @@ align = 2
 [node name="SimpleDoor3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 350, 164 )
 level = "1_3"
-open = true
 spawnPoint = 4
 
 [node name="BackgroundMap" type="TileMap" parent="."]
@@ -369,6 +368,9 @@ scale = Vector2( 2, 2 )
 
 [node name="exitpoint2" type="Position2D" parent="."]
 position = Vector2( 349, 169 )
+
+[node name="exitpoint1" type="Position2D" parent="."]
+position = Vector2( 1631, -49 )
 
 [node name="exitpoint3" type="Position2D" parent="."]
 position = Vector2( -254, 172 )
@@ -400,6 +402,9 @@ scale = Vector2( 2, 2 )
 
 [node name="SimpleDoor5" parent="." instance=ExtResource( 4 )]
 position = Vector2( -255, 164 )
+level = "3_2"
+open = true
+spawnPoint = 2
 
 [node name="Bird" parent="." instance=ExtResource( 3 )]
 position = Vector2( 135, 123 )

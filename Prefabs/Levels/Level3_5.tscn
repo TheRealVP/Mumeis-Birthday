@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://3 - Background and Tiles/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://3 - Background and Tiles/Medieval_Castle_Asset_Pack/Decorations/chair_1.png" type="Texture" id=10]
 [ext_resource path="res://Prefabs/Levels/SpeechArea.gd" type="Script" id=11]
 [ext_resource path="res://Prefabs/Levels/PortArea.gd" type="Script" id=12]
+[ext_resource path="res://Prefabs/Levels/BackToShaftArea.gd" type="Script" id=13]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=14]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
@@ -399,6 +400,9 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="RectangleShape2D" id=55]
+extents = Vector2( 17.5, 10 )
+
 [node name="Level0" type="Node2D"]
 position = Vector2( 312, 214 )
 
@@ -525,5 +529,15 @@ color = Color( 1, 1, 1, 0 )
 anims/RESET = SubResource( 53 )
 "anims/fade out" = SubResource( 54 )
 
+[node name="BackToShaftArea" type="Area2D" parent="."]
+position = Vector2( -368, 389 )
+script = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackToShaftArea"]
+position = Vector2( 80, -9 )
+shape = SubResource( 55 )
+
 [connection signal="body_entered" from="SpeechArea" to="SpeechArea" method="_on_SpeechArea_body_entered"]
+[connection signal="body_exited" from="SpeechArea" to="SpeechArea" method="_on_SpeechArea_body_exited"]
 [connection signal="body_entered" from="PortArea" to="PortArea" method="_on_PortArea_body_entered"]
+[connection signal="body_entered" from="BackToShaftArea" to="BackToShaftArea" method="_on_BackToShaftArea_body_entered"]

@@ -4,6 +4,7 @@ var lives = 3
 var berries = 0
 var current_scene = null
 var exit_point = 0
+var bonus0completed = false
 
 func _ready():
 	var root = get_tree().get_root()
@@ -47,3 +48,6 @@ func set_berries(newBerries):
 	
 func set_exit_point(point):
 	exit_point=point
+	
+func set_bonus0done():
+	bonus0completed=true
