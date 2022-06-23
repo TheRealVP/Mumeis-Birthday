@@ -15,6 +15,8 @@ export (PackedScene) var hurtScreen
 var canSlash = false
 var isSwooping = false
 
+var invulnerable = false
+
 var lives = PlayerVariables.lives
 
 var coinNumber=PlayerVariables.berries
@@ -121,20 +123,23 @@ func _process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 
-	
+
 func hurt(damage):
-	lives -=damage
-	var red = hurtScreen.instance()
-	add_child(red)
-	if lives <=0 :
-		PlayerVariables.goto_scene("res://Prefabs/Menus/GameOver.tscn" )
-	if velocity.x >=0:
-		velocity.y=-73
-		velocity.x=-53
-	elif velocity.x<=0:
-		velocity.y=-73
-		velocity.x=53
-		
+	if invulnerable == true:
+		pass
+	else:
+		lives -=damage
+		var red = hurtScreen.instance()
+		add_child(red)
+		if lives <=0 :
+			PlayerVariables.goto_scene("res://Prefabs/Menus/GameOver.tscn" )
+		if velocity.x >=0:
+			velocity.y=-73
+			velocity.x=-53
+		elif velocity.x<=0:
+			velocity.y=-73
+			velocity.x=53
+			
 func coinPickUp():
 	
 	coinNumber+=1

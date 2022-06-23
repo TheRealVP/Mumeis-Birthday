@@ -1,78 +1,24 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scripts/Coin.gd" type="Script" id=1]
-[ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=44]
-extents = Vector2( 9.5, 9 )
+[ext_resource path="res://Prefabs/Coin/Coffee.gd" type="Script" id=1]
+[ext_resource path="res://4 - Coin and pickup/coffee.png" type="Texture" id=2]
+[ext_resource path="res://4 - Coin and pickup/coffee_steam.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=45]
 resource_name = "Idle"
-length = 0.5
+length = 0.6
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("CollisionShape2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, false ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, -1 ), Vector2( 0, -1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=47]
-resource_name = "Picked"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:position")
@@ -81,34 +27,98 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.1, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -20 ), Vector2( 0, -44 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, -1.5 ), Vector2( 0, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/path = NodePath("Sprite2:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.5 ),
+"times": PoolRealArray( 0, 0.3, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ true, true, true ]
+"update": 0,
+"values": [ Vector2( -4, -5 ), Vector2( -5, -6 ), Vector2( -4, -5 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:modulate")
+tracks/3/path = NodePath("Sprite2:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=47]
+resource_name = "Picked"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -20 ), Vector2( 0, -44 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.262745 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=46]
@@ -161,25 +171,46 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0.458824 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -5, -6 ) ]
+}
 
-[node name="Coin" type="Area2D"]
+[sub_resource type="RectangleShape2D" id=44]
+extents = Vector2( 9.5, 9 )
+
+[node name="Coffee" type="Area2D"]
 script = ExtResource( 1 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 44 )
-disabled = true
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.458824 )
 position = Vector2( 0, -20 )
-scale = Vector2( 0.770834, 0.75 )
+rotation = -0.436332
+scale = Vector2( 0.0730903, 0.0711148 )
 texture = ExtResource( 2 )
-hframes = 6
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( -5, -6 )
+rotation = -0.436332
+scale = Vector2( 0.071, 0.071 )
+texture = ExtResource( 3 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
 anims/Idle = SubResource( 45 )
 anims/Picked = SubResource( 47 )
 anims/RESET = SubResource( 46 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 44 )
+disabled = true
 
 [connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]
