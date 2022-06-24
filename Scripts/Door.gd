@@ -13,9 +13,10 @@ func _process(delta):
 		for body in bodies:
 			if body.name=="Player":
 				PlayerVariables.set_lives(body.lives)
-				PlayerVariables.set_lives(body.coinNumber)
+				PlayerVariables.set_lives(clamp(body.coinNumber, 3, 10))
+				PlayerVariables.set_bonus0done()
 				PlayerVariables.exit_point=1
-				PlayerVariables.goto_scene("res://Prefabs/Levels/Level" + str(int(level)) + ".tscn" )
+				PlayerVariables.goto_scene("res://Prefabs/Levels/Level2_1.tscn" )
 				#get_tree().change_scene("res://Prefabs/Levels/Level" + str(int(level)) + ".tscn" )
 
 

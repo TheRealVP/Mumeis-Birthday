@@ -16,8 +16,10 @@ func _ready():
 #	pass
 
 
-func _on_SecretArea_body_entered(body):
+func _on_BackToShaftArea_body_entered(body):
 	if body.name == "Player":
 		PlayerVariables.set_lives(body.lives)
 		PlayerVariables.set_berries(body.coinNumber)
-		PlayerVariables.goto_scene("res://Prefabs/Levels/Level2_0.tscn" ) # Replace with function body.
+				#if spawnPoint>0:
+		PlayerVariables.set_exit_point(1)
+		PlayerVariables.goto_scene("res://Prefabs/Levels/Level3_4.tscn" ) # Replace with function body.

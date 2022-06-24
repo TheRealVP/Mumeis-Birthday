@@ -16,8 +16,12 @@ func _ready():
 #	pass
 
 
-func _on_SecretArea_body_entered(body):
-	if body.name == "Player":
+func _on_PortArea_body_entered(body):
+	if body.name=="Player":
+		$anim.play("fade out")
+		yield(get_node("anim"), "animation_finished")
 		PlayerVariables.set_lives(body.lives)
 		PlayerVariables.set_berries(body.coinNumber)
-		PlayerVariables.goto_scene("res://Prefabs/Levels/Level2_0.tscn" ) # Replace with function body.
+		#if spawnPoint>0:
+		PlayerVariables.set_exit_point(0)
+		PlayerVariables.goto_scene("res://Prefabs/Levels/Level3_1.tscn" ) # Replace with function body.

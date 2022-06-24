@@ -10,6 +10,8 @@ var target = null
 
 signal ollie_is_hit
 
+signal ollie_is_dead
+
 var coinScene = preload("res://Prefabs/Coin/Coin.tscn")
 
 var lives = 30
@@ -43,6 +45,7 @@ func _on_hitBox_body_entered(body):
 			if lives <=0:
 				$anim.play("Dead")
 				yield(get_node("anim"), "animation_finished")
+				emit_signal("ollie_is_dead")
 				onDestroyed()
 				queue_free()
 		elif body.has_method("hurt"):
@@ -60,6 +63,7 @@ func _on_hitBox_area_entered(area):
 		if lives <=0:
 			$anim.play("Dead")
 			yield(get_node("anim"), "animation_finished")
+			emit_signal("ollie_is_dead")
 			onDestroyed()
 			queue_free()
 			
