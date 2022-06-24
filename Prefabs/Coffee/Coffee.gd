@@ -1,7 +1,7 @@
 extends Area2D
 
 
-var coffee_power_up = preload("res://Prefabs/Coin/CoffeePowerUp.tscn")
+var coffee_power_up = preload("res://Prefabs/Coffee/CoffeePowerUp.tscn")
 
 
 func _on_Coin_body_entered(body):

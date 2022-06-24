@@ -135,10 +135,10 @@ func hurt(damage):
 			PlayerVariables.goto_scene("res://Prefabs/Menus/GameOver.tscn" )
 		if velocity.x >=0:
 			velocity.y=-73
-			velocity.x=-53
+			velocity.x=53 #these two were flipped
 		elif velocity.x<=0:
 			velocity.y=-73
-			velocity.x=53
+			velocity.x=-53 #these two were flipped
 			
 func coinPickUp():
 	
