@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Mumei_Game_BGM_Ending_Theme.mp3-5bb38027ea312207c27a171ddd2c59c9.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Mumei_Game_BGM_Ending_Theme.mp3"
+dest_files=[ "res://.import/Mumei_Game_BGM_Ending_Theme.mp3-5bb38027ea312207c27a171ddd2c59c9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

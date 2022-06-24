@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Mumei_Game_BGM_Exploration_Theme.mp3-d840d231dbba6ddc8cbb9e6c5e60f8fe.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Mumei_Game_BGM_Exploration_Theme.mp3"
+dest_files=[ "res://.import/Mumei_Game_BGM_Exploration_Theme.mp3-d840d231dbba6ddc8cbb9e6c5e60f8fe.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
