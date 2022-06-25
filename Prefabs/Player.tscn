@@ -41,16 +41,6 @@ animations = [ {
 "name": "Jump",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 19 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "Fall",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 28 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "Swoop",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 11 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "DoubleJump",
@@ -60,6 +50,16 @@ animations = [ {
 "loop": true,
 "name": "Walk",
 "speed": 16.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Fall",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "Swoop",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 8 ) ],
 "loop": false,
