@@ -13,9 +13,10 @@ var coinScene = preload("res://Prefabs/Coin/Coin.tscn")
 func _ready():
 
 	original_level = self.position.y
+	$anim.play("flying")
 	#$AnimatedSprite.play("default") # Replace with function body.
 	if(direction ==-1):
-		$Sprite.flip_h = true
+		$Sprite.flip_h = false
 
 func _physics_process(delta):
 	if self.position.y < original_level and hit==true:
