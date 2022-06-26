@@ -481,16 +481,16 @@ position = Vector2( 704, 200 )
 [node name="SimpleDoor" parent="Stuff" instance=ExtResource( 9 )]
 position = Vector2( 312, 292 )
 
-[node name="Cheese" parent="Stuff" instance=ExtResource( 11 )]
-position = Vector2( 480, 304 )
-
 [node name="Collectibles" type="Node" parent="."]
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="Baerat" parent="." instance=ExtResource( 10 )]
+[node name="Baerat" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 624, 184 )
 
-[connection signal="is_triggered" from="Stuff/Lever" to="Stuff/SimpleDoor" method="_on_Lever_is_triggered"]
+[node name="Cheese" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 480, 304 )
+mass = 150.1
+continuous_cd = 2
 
-[editable path="Baerat"]
+[connection signal="is_triggered" from="Stuff/Lever" to="Stuff/SimpleDoor" method="_on_Lever_is_triggered"]

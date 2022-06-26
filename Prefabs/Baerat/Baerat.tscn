@@ -17,14 +17,19 @@ radius = 251.008
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+self_modulate = Color( 1, 0.0745098, 0.0745098, 1 )
 scale = Vector2( 0.1875, 0.1875 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0.5, 0.375 )
 shape = SubResource( 1 )
 
 [node name="Hitbox" type="Area2D" parent="." groups=["Sword"]]
+visible = false
+collision_layer = 4
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2( 0, -3 )
