@@ -1,38 +1,87 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://8 - Texture/shitbird.png" type="Texture" id=1]
+[ext_resource path="res://5 - Hazards/crownii.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Bird.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 26.5, 29.5 )
+extents = Vector2( 29.5, 24 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "flying"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 30.5, 32.5 )
+extents = Vector2( 32, 29 )
 
 [node name="Bird" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -7.62939e-06, -3.8147e-06 )
-scale = Vector2( 0.221774, 0.227778 )
+position = Vector2( -3, -0.669465 )
+scale = Vector2( 0.0530547, 0.0589541 )
 texture = ExtResource( 1 )
+flip_h = true
+hframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2.5, 0.5 )
+position = Vector2( -2.5, 3 )
 shape = SubResource( 1 )
 
 [node name="raycast" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 0, 400 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="anim" type="AnimationPlayer" parent="."]
+autoplay = "flying"
+anims/RESET = SubResource( 3 )
+anims/flying = SubResource( 4 )
 
 [node name="hitBox" type="Area2D" parent="."]
 collision_layer = 5
 collision_mask = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitBox"]
-position = Vector2( -2.5, 0.5 )
+position = Vector2( -2, 2 )
 shape = SubResource( 2 )
 
 [node name="SwoopTimer" type="Timer" parent="."]

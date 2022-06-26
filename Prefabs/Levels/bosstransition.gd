@@ -18,6 +18,7 @@ func _ready():
 
 func _on_bosstransition_body_entered(body):
 	if body.name=="Player":
+		MusicController.play_boss_theme()
 		PlayerVariables.set_lives(body.lives)
 		PlayerVariables.set_berries(body.coinNumber)
 		PlayerVariables.goto_scene("res://Prefabs/Levels/BossLevel1.tscn" ) # Replace with function body.

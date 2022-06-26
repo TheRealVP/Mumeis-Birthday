@@ -110,27 +110,27 @@ func _process(delta):
 		$anim.play("Fall")
 		
 	if Input.is_action_just_pressed("ui_sword") and isSwooping==false:
-		$anim.play("Sword")
-		
 		play_swing()
+		$anim.play("Sword")
 		$Sword/CollisionShape2D.disabled= false
 		canSlash= true
 		if is_on_floor() and canSlash==true:
-			$anim.play("Sword")
 			play_swing()
+			$anim.play("Sword")
 		elif velocity.y < 0 and velocity.x!=0 and canSlash == true:
-			$anim.play("Sword")
 			play_swing()
+			$anim.play("Sword")
 		elif velocity.y > 0 and velocity.x!=0 and canSlash == true:
-			$anim.play("Sword")
 			play_swing()
+			$anim.play("Sword")
 	
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 func play_swing():
-	$SFX.stream= swing
-	$SFX.play()
+	if $anim.get_animation() !="Sword":
+		$SFX.stream= swing
+		$SFX.play()
 
 func hurt(damage):
 	if invulnerable == true:

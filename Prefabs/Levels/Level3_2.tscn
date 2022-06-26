@@ -377,6 +377,12 @@ level = "2_1"
 open = true
 spawnPoint = 1
 
+[node name="SimpleDoor6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 518, 468 )
+level = "3_6"
+open = true
+spawnPoint = 1
+
 [node name="BackgroundMap" type="TileMap" parent="."]
 z_index = -3
 tile_set = SubResource( 47 )

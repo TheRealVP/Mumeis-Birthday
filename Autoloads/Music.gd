@@ -4,6 +4,7 @@ extends Node
 var main_menu_theme =load("res://Sounds/Mumei_Game_BGM_Main_Theme.mp3")
 var exploration_theme= load("res://Sounds/Mumei_Game_BGM_Exploration_Theme.mp3")
 var ending_theme= load("res://Sounds/Mumei_Game_BGM_Ending_Theme.mp3")
+var boss_theme= load("res://Sounds/Mumei_Game_BGM_Boss_Theme.mp3")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -12,7 +13,10 @@ var ending_theme= load("res://Sounds/Mumei_Game_BGM_Ending_Theme.mp3")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-	
+
+func play_boss_theme():
+	$Music.stream = boss_theme
+	$Music.play()
 func play_main_theme():
 	$Music.stream = main_menu_theme
 	$Music.play()

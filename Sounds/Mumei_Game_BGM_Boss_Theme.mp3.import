@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Mumei_Game_BGM_Boss_Theme.mp3-00e6b546a2bb6e1c849bbe8ecb46fa93.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Mumei_Game_BGM_Boss_Theme.mp3"
+dest_files=[ "res://.import/Mumei_Game_BGM_Boss_Theme.mp3-00e6b546a2bb6e1c849bbe8ecb46fa93.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
