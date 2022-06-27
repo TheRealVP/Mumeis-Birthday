@@ -4,14 +4,14 @@
 [ext_resource path="res://Prefabs/Baerat/Baerat.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 9.5, 7.625 )
+extents = Vector2( 4.5, 5 )
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 11.0
 height = 6.0
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 251.008
+radius = 316.0
 
 [node name="Baerat" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -22,12 +22,10 @@ scale = Vector2( 0.1875, 0.1875 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 0.5, 0.375 )
+position = Vector2( 0, 2 )
 shape = SubResource( 1 )
 
 [node name="Hitbox" type="Area2D" parent="." groups=["Sword"]]
-visible = false
 collision_layer = 4
 collision_mask = 8
 
