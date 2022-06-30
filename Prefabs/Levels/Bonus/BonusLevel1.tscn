@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=1]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Hazards/Hazards.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Coin/Coin.tscn" type="PackedScene" id=10]
+[ext_resource path="res://RedMemory.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Sign/Sign.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Boulder/Boulder.tscn" type="PackedScene" id=14]
 
@@ -703,7 +704,7 @@ position = Vector2( 3836, 414 )
 position = Vector2( 3860, 414 )
 
 [node name="Sign" parent="Stuff" instance=ExtResource( 12 )]
-position = Vector2( 4030, 392 )
+position = Vector2( 4030, 378 )
 signtext = "What the heck do you mean \"That's a pipe cleaner\"?"
 
 [node name="signtext" parent="Stuff/Sign" index="2"]
@@ -797,5 +798,9 @@ position = Vector2( 1328, 136 )
 
 [node name="Boulder" parent="Enemies" instance=ExtResource( 14 )]
 position = Vector2( 72, 112 )
+
+[node name="RedMemory" parent="." instance=ExtResource( 11 )]
+position = Vector2( 4030, 403 )
+scale = Vector2( 0.1, 0.1 )
 
 [editable path="Stuff/Sign"]

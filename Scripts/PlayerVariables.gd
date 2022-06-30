@@ -7,6 +7,12 @@ var exit_point = 0
 var bonus0completed = false
 var main_room_key = false
 var checkpoint_reached = false
+var red_memory_found = false
+var blue_memory_found = false
+var green_memory_found = false
+var red_memory_placed = false
+var blue_memory_placed = false
+var green_memory_placed = false
 
 func _ready():
 	var root = get_tree().get_root()
@@ -53,6 +59,24 @@ func set_exit_point(point):
 	
 func set_bonus0done():
 	bonus0completed=true
+	
+func set_red_memory_found():
+	red_memory_found=true
+	
+func set_blue_memory_found():
+	blue_memory_found=true
+	
+func set_green_memory_found():
+	green_memory_found=true
+	
+func set_red_memory_placed():
+	red_memory_placed=true
+	
+func set_blue_memory_placed():
+	blue_memory_placed=true
+	
+func set_green_memory_placed():
+	green_memory_placed=true
 	
 func set_checkpoint_reached():
 	checkpoint_reached=true

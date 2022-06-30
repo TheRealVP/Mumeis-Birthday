@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/layer_1.png-ba62cb78249d2364bc6e7d7c0a64eede.stex"
+path="res://.import/layer_1.png-a54df0f245d2cb58556dcb39930f89be.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://3 - Background and Tiles/Medieval_Castle_Asset_Pack/Background/layer_1.png"
-dest_files=[ "res://.import/layer_1.png-ba62cb78249d2364bc6e7d7c0a64eede.stex" ]
+source_file="res://3 - Background and Tiles/layer_1.png"
+dest_files=[ "res://.import/layer_1.png-a54df0f245d2cb58556dcb39930f89be.stex" ]
 
 [params]
 
