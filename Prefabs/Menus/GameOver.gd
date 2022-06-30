@@ -8,8 +8,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	MusicController.play_main_theme()
 	randomize()
-	var rng = randi()%20 # Replace with function body.
+	var rng = randi()%21 # Replace with function body.
 	if rng == 1:
 		$UnwantedAdvice.text="Not every enemy can generate the momentum to hurt you on contact."
 	elif rng == 2:
@@ -33,7 +34,7 @@ func _ready():
 	elif rng == 11:
 		$UnwantedAdvice.text="Don't believe the lies of the ticket-selling paper bag."
 	elif rng == 12:
-		$UnwantedAdvice.text="Yagoo is the undisputed best girl of Hololive."
+		$UnwantedAdvice.text="Yagoo is the undisputed best girl of Hololive. Sorry Mumei, it's just the truth..."
 	elif rng == 13:
 		$UnwantedAdvice.text="There is no cow level."
 	elif rng == 14:
@@ -49,7 +50,9 @@ func _ready():
 	elif rng == 19:
 		$UnwantedAdvice.text="Buffalo buffalo buffalo buffalo buffalo buffalo buffalo is a grammatically correct sentence."
 	elif rng == 20:
-		$UnwantedAdvice.text="If you enjoyed this game, subscribe to Nanashi Mumei's channel!"
+		$UnwantedAdvice.text="If you enjoyed this game, subscribe to Nanashi Mumei's channel and get to work on smashing all those like buttons!"
+	else:
+		$UnwantedAdvice.text="Just don't die next time!"
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

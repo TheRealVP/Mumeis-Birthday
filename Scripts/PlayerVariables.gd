@@ -5,6 +5,8 @@ var berries = 0
 var current_scene = null
 var exit_point = 0
 var bonus0completed = false
+var main_room_key = false
+var checkpoint_reached = false
 
 func _ready():
 	var root = get_tree().get_root()
@@ -51,3 +53,6 @@ func set_exit_point(point):
 	
 func set_bonus0done():
 	bonus0completed=true
+	
+func set_checkpoint_reached():
+	checkpoint_reached=true

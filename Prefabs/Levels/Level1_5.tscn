@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://3 - Background and Tiles/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://3 - Background and Tiles/Background.png" type="Texture" id=5]
 [ext_resource path="res://3 - Background and Tiles/Farm/TX Tileset Ground.png" type="Texture" id=6]
 [ext_resource path="res://3 - Background and Tiles/ForgottenDungeon.png" type="Texture" id=7]
+[ext_resource path="res://Prefabs/Levels/Level1_5.gd" type="Script" id=8]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=14]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
@@ -509,6 +510,7 @@ points = PoolVector2Array( 17, 17, 0, 17, 0, 0, 17, 0 )
 
 [node name="Level1_4" type="Node2D"]
 position = Vector2( 312, 214 )
+script = ExtResource( 8 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -311, -215 )
@@ -571,6 +573,7 @@ align = 2
 position = Vector2( -159, 131 )
 level = "1_3"
 open = true
+spawnPoint = 3
 
 [node name="BackgroundMap" type="TileMap" parent="."]
 z_index = -3
@@ -592,3 +595,6 @@ tile_data = PoolIntArray( -1114072, 0, 0, -1114071, 0, 0, -1114070, 0, 0, -11140
 position = Vector2( -165, 137 )
 z_index = 6
 collision_mask = 3
+
+[node name="KeyPosition" type="Position2D" parent="."]
+position = Vector2( 28, 139 )

@@ -153,6 +153,8 @@ func coinPickUp():
 	coinNumber+=1
 	PlayerVariables.set_berries(coinNumber)
 
+func keyPickUpMainDoor1():
+	PlayerVariables.main_room_key=true
 
 func _on_anim_animation_finished():
 	if $anim.animation == "Sword":
