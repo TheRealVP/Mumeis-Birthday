@@ -7,6 +7,7 @@
 extents = Vector2( 22, 10 )
 
 [node name="Sign" type="Area2D"]
+position = Vector2( 8, 0 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
