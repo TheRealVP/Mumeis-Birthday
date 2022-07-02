@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://6 - UI/JungleAdventurer.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://6 - UI/sickmei.jpg" type="Texture" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://Prefabs/Menus/Back.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/Menus/GameOver.gd" type="Script" id=5]
 [ext_resource path="res://6 - UI/SmallBackground.png" type="Texture" id=6]
+[ext_resource path="res://6 - UI/GreenButton.png" type="Texture" id=7]
+[ext_resource path="res://6 - UI/GreenButtonPressed.png" type="Texture" id=8]
+[ext_resource path="res://6 - UI/CloseButton.png" type="Texture" id=9]
+[ext_resource path="res://6 - UI/CloseButtonPressed.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 74
@@ -13,10 +17,44 @@ use_mipmaps = true
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 14
 font_data = ExtResource( 1 )
 
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
 [sub_resource type="DynamicFont" id=3]
+size = 15
 font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 178, 148 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 178, 148 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 178, 148 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 178, 148 )
 
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 1 )
@@ -61,6 +99,10 @@ margin_right = 908.0
 margin_bottom = 256.0
 rect_pivot_offset = Vector2( -12, -12 )
 custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
 text = "A New Start"
 script = ExtResource( 3 )
 __meta__ = {
@@ -73,7 +115,11 @@ margin_top = 268.0
 margin_right = 900.0
 margin_bottom = 301.0
 custom_fonts/font = SubResource( 3 )
-text = "Ragequit"
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+text = "Quit"
 script = ExtResource( 4 )
 
 [node name="UnwantedAdvice" type="Label" parent="."]

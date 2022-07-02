@@ -8,6 +8,9 @@ var jumpCount = 0
 var wallJump =  -80
 var gravity = 300
 var swing = load("res://Sounds/swing3.wav")
+var jumpfx = load("res://Sounds/jump1.wav")
+var hitfx = load("res://Sounds/hit.wav")
+var swoopfx = load("res://Sounds/swoop.wav")
 
 const FRICTION = 0.70
 
@@ -55,6 +58,7 @@ func _process(delta):
 		elif velocity.y > 0 and canSlash==false and isSwooping==false:
 			$anim.play("Fall")
 		elif velocity.y > 0 and canSlash==false and isSwooping==true:
+			play_swoop()
 			$anim.play("Swoop")
 	
 	elif movement == 0 and canSlash==false:
@@ -90,9 +94,11 @@ func _process(delta):
 		
 	
 	if !is_on_floor() and Input.is_action_just_pressed("ui_accept")  and jumpCount>2:
+		play_jump()
 		jumpCount=0
 		#$anim.play("Jump")
 	elif is_on_floor() and Input.is_action_just_pressed("ui_accept")  and canSlash==false and jumpCount<2:
+		play_jump()
 		jumpCount+=1
 		velocity.y -=clamp(velocity.y, jump, jump)
 		if jumpCount==2:
@@ -132,10 +138,23 @@ func play_swing():
 		$SFX.stream= swing
 		$SFX.play()
 
+func play_jump():
+	$SFX.stream= jumpfx
+	$SFX.play()
+
+func play_hurt():
+	$SFX.stream = hitfx
+	$SFX.play()
+
+func play_swoop():
+	$SFX.stream = swoopfx
+	$SFX.play()
+
 func hurt(damage):
 	if invulnerable == true:
 		pass
 	else:
+		play_hurt()
 		lives -=damage
 		var red = hurtScreen.instance()
 		add_child(red)

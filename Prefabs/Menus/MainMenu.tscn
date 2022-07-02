@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://0 - AsepriteFiles/nightmarebunkeronii.jpg" type="Texture" id=1]
 [ext_resource path="res://6 - UI/JungleAdventurer.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,11 @@
 [ext_resource path="res://Prefabs/Menus/HowToPlay.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/Menus/Quit.gd" type="Script" id=5]
 [ext_resource path="res://Prefabs/Menus/MainMenu.gd" type="Script" id=6]
+[ext_resource path="res://6 - UI/GreenButton.png" type="Texture" id=7]
+[ext_resource path="res://6 - UI/GreenButtonPressed.png" type="Texture" id=8]
+[ext_resource path="res://6 - UI/BlueButton.png" type="Texture" id=9]
+[ext_resource path="res://6 - UI/BlueButtonPressed.png" type="Texture" id=10]
+[ext_resource path="res://6 - UI/CloseButton.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 74
@@ -15,11 +20,47 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 2 )
 
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
 [sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 2 )
 
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 178, 148 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -47,6 +88,10 @@ margin_right = 353.0
 margin_bottom = 502.0
 rect_pivot_offset = Vector2( -12, -12 )
 custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/normal = SubResource( 6 )
 text = "Play"
 script = ExtResource( 3 )
 __meta__ = {
@@ -60,6 +105,10 @@ margin_right = 537.0
 margin_bottom = 501.0
 rect_pivot_offset = Vector2( -12, -12 )
 custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
 text = "Help"
 script = ExtResource( 4 )
 __meta__ = {
@@ -73,6 +122,7 @@ margin_right = 731.0
 margin_bottom = 500.0
 rect_pivot_offset = Vector2( -12, -12 )
 custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 13 )
 text = "Quit"
 script = ExtResource( 5 )
 __meta__ = {

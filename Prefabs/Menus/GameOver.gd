@@ -18,7 +18,7 @@ func _ready():
 	elif rng == 3:
 		$UnwantedAdvice.text="Every level has been playtested and beaten. You can do it!"
 	elif rng == 4:
-		$UnwantedAdvice.text="There are 220 species of owls in the world."
+		$UnwantedAdvice.text="There are 220 species of owls in the world. Lots of ideas for alternative outfits huh? ;D"
 	elif rng == 5:
 		$UnwantedAdvice.text="Owl-like birds, like Berruornis and Ogygoptynx, lived 60 million years ago. Owls are one of the most ancient types of bird, along with chickens, turkeys, and pheasants."
 	elif rng == 6:
@@ -52,7 +52,7 @@ func _ready():
 	elif rng == 20:
 		$UnwantedAdvice.text="If you enjoyed this game, subscribe to Nanashi Mumei's channel and get to work on smashing all those like buttons!"
 	else:
-		$UnwantedAdvice.text="Just don't die next time!"
+		$UnwantedAdvice.text="Just don't die next time! :D"
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

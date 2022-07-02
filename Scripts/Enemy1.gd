@@ -6,11 +6,13 @@ var direction= Vector2.RIGHT
 var gravity = 500
 
 var coinScene = preload("res://Prefabs/Coin/Coin.tscn")
+var dead= load("res://Sounds/monstercry.wav" )
 
 var lives = 3
 
 func _process(delta):
-	velocity.x = speed*direction.x
+	if $anim.get_assigned_animation() != "Hurt":
+		velocity.x = speed*direction.x
 	
 	if lives <=0:
 		velocity = Vector2.ZERO
@@ -35,6 +37,8 @@ func _on_hitBox_body_entered(body):
 			yield(get_node("anim"), "animation_finished")
 			$anim.play("Run")
 			if lives <=0:
+				$SFX.stream= dead
+				$SFX.play()
 				$anim.play("Dead")
 				yield(get_node("anim"), "animation_finished")
 				onDestroyed()
@@ -46,11 +50,19 @@ func _on_hitBox_body_entered(body):
 func _on_hitBox_area_entered(area):
 	if area.is_in_group("Sword"):
 		lives -=1
+		if velocity.x >=0:
+			velocity.y=-73
+			velocity.x=-53 #these two were flipped
+		elif velocity.x<=0:
+			velocity.y=-73
+			velocity.x=53
 		$anim.play("Hurt")
 		yield(get_node("anim"), "animation_finished")
 		direction *=-1
 		$anim.play("Run")
 		if lives <=0:
+			$SFX.stream= dead
+			$SFX.play()
 			$anim.play("Dead")
 			yield(get_node("anim"), "animation_finished")
 			onDestroyed()

@@ -6,7 +6,7 @@ const HEART_ROW_SIZE= 8
 const HEART_OFFSET = 16
 
 func _ready():
-	for i in player.lives:
+	for i in clamp(player.lives, 3, 20):
 		var new_heart = Sprite.new()
 		new_heart.texture = $Heart.texture
 		new_heart.hframes = $Heart.hframes

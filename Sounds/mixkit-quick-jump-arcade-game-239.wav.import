@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit-quick-jump-arcade-game-239.wav-77076811fe2ad943c94d7f62d6d90f81.sample"
+
+[deps]
+
+source_file="res://Sounds/mixkit-quick-jump-arcade-game-239.wav"
+dest_files=[ "res://.import/mixkit-quick-jump-arcade-game-239.wav-77076811fe2ad943c94d7f62d6d90f81.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

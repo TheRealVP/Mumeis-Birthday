@@ -348,7 +348,7 @@ text = "0"
 align = 2
 
 [node name="SimpleDoor3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 350, 164 )
+position = Vector2( 749, 164 )
 script = ExtResource( 10 )
 
 [node name="BackgroundMap" type="TileMap" parent="."]
@@ -417,5 +417,8 @@ script = ExtResource( 5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SecretArea"]
 position = Vector2( 17, -70 )
 shape = SubResource( 48 )
+
+[node name="SimpleDoor" parent="." instance=ExtResource( 4 )]
+position = Vector2( 192, 164 )
 
 [connection signal="body_entered" from="SecretArea" to="SecretArea" method="_on_SecretArea_body_entered"]

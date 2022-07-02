@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://3 - Background and Tiles/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://3 - Background and Tiles/Medieval_Castle_Asset_Pack/Decorations/bookshelf_1.png" type="Texture" id=18]
 [ext_resource path="res://3 - Background and Tiles/Medieval_Castle_Asset_Pack/Decorations/table_shadow.png" type="Texture" id=19]
 [ext_resource path="res://3 - Background and Tiles/torch.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Prefabs/Coffee/Coffee.tscn" type="PackedScene" id=21]
 
 [sub_resource type="ConvexPolygonShape2D" id=26]
 points = PoolVector2Array( 17, 17, 0, 17, 0, 0, 17, 0 )
@@ -377,25 +378,16 @@ z_index = 6
 collision_mask = 3
 
 [node name="Coin" parent="." instance=ExtResource( 3 )]
-position = Vector2( -52, 103 )
+position = Vector2( -15, 134 )
 
 [node name="Coin2" parent="." instance=ExtResource( 3 )]
-position = Vector2( -32, 103 )
+position = Vector2( 5, 134 )
 
 [node name="Coin3" parent="." instance=ExtResource( 3 )]
-position = Vector2( -12, 103 )
-
-[node name="Coin6" parent="." instance=ExtResource( 3 )]
-position = Vector2( -12, 84 )
-
-[node name="Coin7" parent="." instance=ExtResource( 3 )]
-position = Vector2( -32, 84 )
-
-[node name="Coin8" parent="." instance=ExtResource( 3 )]
-position = Vector2( -52, 84 )
+position = Vector2( 25, 134 )
 
 [node name="zetanote" type="Area2D" parent="."]
-position = Vector2( -178, 148 )
+position = Vector2( -187, 129 )
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="zetanote"]
@@ -415,6 +407,7 @@ texture = ExtResource( 11 )
 
 [node name="TableShadow" type="Sprite" parent="."]
 position = Vector2( -1, 150 )
+z_index = -1
 texture = ExtResource( 19 )
 
 [node name="Bookshelf1" type="Sprite" parent="."]
@@ -424,10 +417,12 @@ texture = ExtResource( 18 )
 
 [node name="Chair2" type="Sprite" parent="."]
 position = Vector2( -43, 143 )
+z_index = -1
 texture = ExtResource( 12 )
 
 [node name="Books" type="Sprite" parent="Chair2"]
 position = Vector2( 42, -8 )
+z_index = -1
 texture = ExtResource( 13 )
 
 [node name="torch" parent="Chair2" instance=ExtResource( 20 )]
@@ -435,6 +430,9 @@ position = Vector2( 110, -46 )
 
 [node name="torch2" parent="Chair2" instance=ExtResource( 20 )]
 position = Vector2( -51, -47 )
+
+[node name="Coffee" parent="." instance=ExtResource( 21 )]
+position = Vector2( -25, 134 )
 
 [connection signal="body_entered" from="SecretArea" to="SecretArea" method="_on_SecretArea_body_entered"]
 [connection signal="body_entered" from="zetanote" to="zetanote" method="_on_zetanote_body_entered"]

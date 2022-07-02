@@ -5,7 +5,9 @@ onready var BULLET_SCENE = preload("res://Prefabs/Bullet/Bullet.tscn")
 # var a = 2
 # var b = "text"
 
+var dead= load("res://Sounds/monstercry.wav" )
 var target = null
+var dying = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	doCharge()
@@ -15,7 +17,7 @@ func _ready():
 func doCharge():
 	$anim.play("Charge") # Replace with function body.
 	yield(get_node("anim"), "animation_finished")
-	if target!=null:
+	if target!=null and dying==false:
 		fire()
 	doFade()
 	
@@ -53,4 +55,9 @@ func _on_Area2D_body_exited(body):
 
 func _on_hitbox_area_entered(area):
 	if area.is_in_group("Sword"):
+		dying=true
+		$SFX.stream= dead
+		$SFX.play()
+		$anim.play("death")
+		yield(get_node("anim"), "animation_finished")
 		queue_free() # Replace with function body.
