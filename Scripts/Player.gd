@@ -15,6 +15,7 @@ export (PackedScene) var hurtScreen
 
 var canSlash = false
 var isSwooping = false
+var laddering = false
 
 var invulnerable = false
 
@@ -124,6 +125,13 @@ func _process(delta):
 			play_swing()
 			$anim.play("Sword")
 	
+	##LADDER
+	if laddering == true:
+		if Input.is_action_pressed("ui_up"):
+			velocity.y = -speed
+		if Input.is_action_pressed("ui_down"):
+			velocity.y = speed
+	
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
 
@@ -168,3 +176,12 @@ func _on_BerriesTimer_timeout():
 		coinNumber-=1
 		
 		# Replace with function body.
+
+
+func _on_LadderCheck_body_entered(body):
+	laddering = true
+
+
+func _on_LadderCheck_body_exited(body):
+	laddering = false
+	
