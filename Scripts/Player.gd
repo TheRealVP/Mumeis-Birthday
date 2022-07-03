@@ -41,7 +41,7 @@ func _process(delta):
 		elif $anim.flip_h==false and isSwooping==true:
 			velocity.x=-200
 		else:
-			velocity.x += movement * speed * delta
+			velocity.x += movement * speed * delta*2
 			velocity.x = clamp(velocity.x, -speed, speed)
 		$anim.flip_h= movement > 0
 		if $anim.flip_h == false:

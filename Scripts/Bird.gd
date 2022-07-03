@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+onready var coinScene = preload("res://Prefabs/Coin/Coin.tscn")
 var velocity = Vector2(0,0)
 export var direction = -1
 var speed = 70
@@ -7,7 +8,6 @@ var dying = false
 var original_level = self.position.y
 var hit=false
 var swooped=false
-var coinScene = preload("res://Prefabs/Coin/Coin.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

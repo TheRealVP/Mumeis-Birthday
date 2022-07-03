@@ -15,7 +15,7 @@ signal ollie_is_dead
 
 
 
-var lives = 1
+var lives = 30
 
 func _process(delta):
 	velocity.x = speed*direction.x
