@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 onready var BULLET_SCENE = preload("res://Prefabs/Bullet/Bullet.tscn")
+onready var coinScene = preload("res://Prefabs/Coin/Coin.tscn")
 
 var speed = 20
 var velocity = Vector2.ZERO
@@ -12,9 +13,9 @@ signal ollie_is_hit
 
 signal ollie_is_dead
 
-var coinScene = preload("res://Prefabs/Coin/Coin.tscn")
 
-var lives = 30
+
+var lives = 1
 
 func _process(delta):
 	velocity.x = speed*direction.x
