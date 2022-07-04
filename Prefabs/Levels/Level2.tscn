@@ -547,7 +547,6 @@ position = Vector2( -157, 14 )
 
 [node name="Enemy1" parent="." instance=ExtResource( 12 )]
 position = Vector2( -10, 44 )
-scale = Vector2( 2, 2 )
 
 [node name="pathPoint" parent="." instance=ExtResource( 13 )]
 position = Vector2( -64, 50 )
