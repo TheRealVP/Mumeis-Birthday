@@ -33,3 +33,7 @@ func _process(delta):
 
 func _on_GiantOllie_ollie_is_hit():
 	$BossProgressBar.value-=1 # Replace with function body.
+
+
+func _on_Kronii_kronii_is_hit():
+	$BossProgressBar.value-=1  # Replace with function body.
