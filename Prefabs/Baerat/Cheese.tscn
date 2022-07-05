@@ -10,8 +10,9 @@ friction = 2.0
 radius = 15.5
 
 [node name="Cheese" type="RigidBody2D" groups=["Cheese"]]
-mass = 15.9571
+mass = 1.5051
 physics_material_override = SubResource( 2 )
+gravity_scale = 1.82
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

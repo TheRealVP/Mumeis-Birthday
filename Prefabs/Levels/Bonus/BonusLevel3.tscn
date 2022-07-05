@@ -482,6 +482,7 @@ tile_data = PoolIntArray( -4915183, 2, 0, -4915182, 2, 0, -4915181, 2, 0, -49151
 script = ExtResource( 5 )
 
 [node name="Fog" type="TextureRect" parent="GUI"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 7 )
