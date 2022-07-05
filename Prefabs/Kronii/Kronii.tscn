@@ -31,7 +31,7 @@ script = ExtResource( 1 )
 position = Vector2( -1, -1 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 2 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="Shields" type="Node" parent="."]
@@ -58,5 +58,7 @@ collision_mask = 4
 position = Vector2( 40, 0 )
 scale = Vector2( 0.6, 0.6 )
 shape = SubResource( 1 )
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="area_entered" from="hitBox" to="." method="_on_hitBox_area_entered"]

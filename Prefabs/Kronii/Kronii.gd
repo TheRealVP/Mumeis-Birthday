@@ -10,7 +10,9 @@ var flip=1
 var counter=1
 var lives=15
 
+signal kronii_is_hit
 
+signal kronii_is_dead
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -70,6 +72,7 @@ func _physics_process(delta):
 func _on_hitBox_area_entered(area):
 	if area.is_in_group("Sword"):
 		lives -=1
+		emit_signal("kronii_is_hit")
 		print("OUCH")
 		if lives <=0:
 			queue_free() # Replace with function body.
