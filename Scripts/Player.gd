@@ -139,7 +139,12 @@ func _process(delta):
 			velocity.y = speed
 	
 	velocity.y += gravity * delta
-	velocity = move_and_slide(velocity, Vector2.UP)
+	velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
+
+	for index in get_slide_count():
+		var collision = get_slide_collision(index)
+		if collision.collider.is_in_group("Cheese"):
+			collision.collider.apply_central_impulse(-collision.normal *  25)
 
 func play_swing():
 	if $anim.get_animation() !="Sword":
