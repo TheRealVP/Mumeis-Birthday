@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Prefabs/Levels/tilesetforall.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -11,10 +11,16 @@
 [ext_resource path="res://Memories/3-celebration@WthJiE.jpg" type="Texture" id=9]
 [ext_resource path="res://Memories/mumeirants.jpg" type="Texture" id=10]
 [ext_resource path="res://Memories/botw@yomikakisan.jpg" type="Texture" id=11]
+[ext_resource path="res://Memories/reinesenpai.jpg" type="Texture" id=12]
+[ext_resource path="res://Memories/dumberthanafifthgrader.jpg" type="Texture" id=13]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=14]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=17]
+[ext_resource path="res://Memories/dontstarve.jpg" type="Texture" id=18]
+[ext_resource path="res://Memories/berrylovers.jpg" type="Texture" id=19]
+[ext_resource path="res://Memories/christmasmei@InabaReito.jpg" type="Texture" id=20]
+[ext_resource path="res://Memories/memereview.jpg" type="Texture" id=21]
 
 [node name="Level3_6" type="Node2D"]
 position = Vector2( 312, 214 )
@@ -33,7 +39,7 @@ current = true
 zoom = Vector2( 0.5, 0.5 )
 limit_left = 0
 limit_top = 0
-limit_right = 1400
+limit_right = 3148
 limit_bottom = 850
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
@@ -45,6 +51,11 @@ drag_margin_right = 0.18
 drag_margin_bottom = 0.27
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="Memereview" type="Sprite" parent="Player/Camera2D"]
+position = Vector2( 3568.39, 165.778 )
+scale = Vector2( 0.208768, 0.220679 )
+texture = ExtResource( 21 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -106,27 +117,52 @@ z_index = -1
 texture = ExtResource( 3 )
 
 [node name="2-passpartout" type="Sprite" parent="."]
-position = Vector2( 367, 28 )
+position = Vector2( 1277, 28 )
 scale = Vector2( 0.15, 0.15 )
 z_index = -1
 texture = ExtResource( 5 )
 
 [node name="3-celebrationWthJiE" type="Sprite" parent="."]
-position = Vector2( 645, 2 )
-scale = Vector2( 0.13, 0.13 )
+position = Vector2( 1513.44, 28.06 )
+scale = Vector2( 0.100221, 0.104551 )
 texture = ExtResource( 9 )
 
 [node name="AnimolcrossingKamy2425" type="Sprite" parent="."]
-position = Vector2( 911, 55 )
-scale = Vector2( 0.15, 0.15 )
+position = Vector2( 1728, 62 )
+scale = Vector2( 0.138542, 0.133333 )
 texture = ExtResource( 8 )
 
 [node name="Mumeirants" type="Sprite" parent="."]
-position = Vector2( 1192, 64 )
+position = Vector2( 2000, 64 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 10 )
 
 [node name="Botwyomikakisan" type="Sprite" parent="."]
-position = Vector2( 1451, 63 )
+position = Vector2( 2259, 63 )
 scale = Vector2( 0.196875, 0.2 )
 texture = ExtResource( 11 )
+
+[node name="Reinesenpai" type="Sprite" parent="."]
+position = Vector2( 661, 28.5 )
+scale = Vector2( 0.168717, 0.167994 )
+texture = ExtResource( 12 )
+
+[node name="Dontstarve" type="Sprite" parent="."]
+position = Vector2( 355.625, 39.625 )
+scale = Vector2( 0.238086, 0.237847 )
+texture = ExtResource( 18 )
+
+[node name="Dumberthanafifthgrader" type="Sprite" parent="."]
+position = Vector2( 960.438, 28.8125 )
+scale = Vector2( 0.470508, 0.438281 )
+texture = ExtResource( 13 )
+
+[node name="Berrylovers" type="Sprite" parent="."]
+position = Vector2( 2518, 62.875 )
+scale = Vector2( 0.201953, 0.200347 )
+texture = ExtResource( 19 )
+
+[node name="ChristmasmeiInabaReito" type="Sprite" parent="."]
+position = Vector2( 2697.88, 63.1563 )
+scale = Vector2( 0.0339496, 0.0352584 )
+texture = ExtResource( 20 )

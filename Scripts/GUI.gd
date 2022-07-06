@@ -37,3 +37,9 @@ func _on_GiantOllie_ollie_is_hit():
 
 func _on_Kronii_kronii_is_hit():
 	$BossProgressBar.value-=1  # Replace with function body.
+
+
+func _on_Kronii_kronii_is_dead():
+	$AnimationPlayer.play("fadeout")
+	yield(get_node("AnimationPlayer"), "animation_finished")
+	 # Replace with function body.

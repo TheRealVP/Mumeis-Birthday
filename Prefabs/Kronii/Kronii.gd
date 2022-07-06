@@ -12,6 +12,8 @@ var lives=15
 
 signal kronii_is_hit
 
+var gwak= load("res://Sounds/gwak-kronii-By-Tuna.mp3" )
+
 signal kronii_is_dead
 
 # Called when the node enters the scene tree for the first time.
@@ -73,6 +75,16 @@ func _on_hitBox_area_entered(area):
 	if area.is_in_group("Sword"):
 		lives -=1
 		emit_signal("kronii_is_hit")
-		print("OUCH")
+		playHit()
+		
 		if lives <=0:
+			emit_signal("kronii_is_dead")
 			queue_free() # Replace with function body.
+
+func playHit():
+	$SFX.stream= gwak
+	$SFX.play()
+	$GwakTimer.start()
+
+func _on_GwakTimer_timeout():
+	$SFX.stop() # Replace with function body.
