@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/scissors-paper1.mp3-c777bf423e6853f889fff014e48b1357.mp3str"
+
+[deps]
+
+source_file="res://Sounds/scissors-paper1.mp3"
+dest_files=[ "res://.import/scissors-paper1.mp3-c777bf423e6853f889fff014e48b1357.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -31,7 +31,7 @@ script = ExtResource( 1 )
 position = Vector2( -1, -1 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 2 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="Shields" type="Node" parent="."]
