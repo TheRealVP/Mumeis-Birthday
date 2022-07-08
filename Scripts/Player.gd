@@ -187,6 +187,15 @@ func coinPickUp():
 
 func keyPickUpMainDoor1():
 	PlayerVariables.main_room_key=true
+	
+func pickUpGreenMemory():
+	PlayerVariables.green_memory_found = true
+	
+func pickUpRedMemory():
+	PlayerVariables.red_memory_found = true
+	
+func pickUpBlueMemory():
+	PlayerVariables.blue_memory_found = true
 
 func _on_anim_animation_finished():
 	if $anim.animation == "Sword":
