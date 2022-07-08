@@ -8,7 +8,7 @@ var direction_x=1
 var direction_y=1
 var flip=1
 var counter=1
-var lives=15
+var lives=1
 
 signal kronii_is_hit
 
@@ -79,6 +79,7 @@ func _on_hitBox_area_entered(area):
 		
 		if lives <=0:
 			emit_signal("kronii_is_dead")
+			
 			queue_free() # Replace with function body.
 
 func playHit():

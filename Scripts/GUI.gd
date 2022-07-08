@@ -42,4 +42,5 @@ func _on_Kronii_kronii_is_hit():
 func _on_Kronii_kronii_is_dead():
 	$AnimationPlayer.play("fadeout")
 	yield(get_node("AnimationPlayer"), "animation_finished")
+	PlayerVariables.goto_scene("res://Prefabs/Menus/BirthdayCake.tscn" )
 	 # Replace with function body.

@@ -84,3 +84,18 @@ func set_checkpoint_reached():
 	
 func set_anewstart_reached():
 	anewstart_reached=true
+	
+func a_newer_start():
+	var lives = 3
+	var berries = 0
+	var exit_point = 0
+	var bonus0completed = false
+	var main_room_key = false
+	var checkpoint_reached = false
+	var anewstart_reached = false
+	var red_memory_found = false
+	var blue_memory_found = false
+	var green_memory_found = false
+	var red_memory_placed = false
+	var blue_memory_placed = false
+	var green_memory_placed = false

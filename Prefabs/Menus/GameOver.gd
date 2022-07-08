@@ -22,7 +22,7 @@ func _ready():
 	elif rng == 5:
 		$UnwantedAdvice.text="Owl-like birds, like Berruornis and Ogygoptynx, lived 60 million years ago. Owls are one of the most ancient types of bird, along with chickens, turkeys, and pheasants."
 	elif rng == 6:
-		$UnwantedAdvice.text="If a human were to turn their head like an owl, they would suffer traumatic arterial injuries and blood flow interruptions.["
+		$UnwantedAdvice.text="If a human were to turn their head like an owl, they would suffer traumatic arterial injuries and blood flow interruptions."
 	elif rng == 7:
 		$UnwantedAdvice.text="You can gain a lot of forward momentum if you run and swoop near the floor. Be careful not to skate away."
 	elif rng == 8:
