@@ -196,6 +196,15 @@ func pickUpRedMemory():
 	
 func pickUpBlueMemory():
 	PlayerVariables.blue_memory_found = true
+	
+func placeGreenMemory():
+	PlayerVariables.green_memory_placed = true
+	
+func placeRedMemory():
+	PlayerVariables.red_memory_placed = true
+	
+func placeBlueMemory():
+	PlayerVariables.blue_memory_placed = true
 
 func _on_anim_animation_finished():
 	if $anim.animation == "Sword":
