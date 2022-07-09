@@ -1,7 +1,8 @@
 extends Area2D
 
 func _ready():
-	pass
+	if PlayerVariables.green_memory_found==true:
+		queue_free()
 
 func _on_GreenMemory_body_entered(body):
 		if body.has_method("pickUpGreenMemory"):

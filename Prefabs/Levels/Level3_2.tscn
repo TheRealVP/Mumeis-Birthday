@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Prefabs/Levels/tilesetforall.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -6,9 +6,13 @@
 [ext_resource path="res://Prefabs/Door/SimpleDoor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Levels/backgroundforall.tres" type="TileSet" id=5]
 [ext_resource path="res://Scripts/Level1_1.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/Door/HallDoor.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Enemy/pathPoint.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Enemy/Enemy1.tscn" type="PackedScene" id=9]
 [ext_resource path="res://3 - Background and Tiles/torch.tscn" type="PackedScene" id=10]
+[ext_resource path="res://RedMemory.tscn" type="PackedScene" id=11]
+[ext_resource path="res://GreenMemory.tscn" type="PackedScene" id=12]
+[ext_resource path="res://BlueMemory.tscn" type="PackedScene" id=13]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=14]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
@@ -118,7 +122,7 @@ open = true
 spawnPoint = 1
 
 [node name="SimpleDoor6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 518, 468 )
+position = Vector2( 568, 468 )
 level = "3_6"
 open = true
 spawnPoint = 1
@@ -183,3 +187,21 @@ position = Vector2( 518, 403 )
 
 [node name="SimpleDoor5" parent="." instance=ExtResource( 4 )]
 position = Vector2( -170, 500 )
+
+[node name="HallDoor" parent="." instance=ExtResource( 7 )]
+position = Vector2( 511, 468 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 392, 397 )
+
+[node name="RedMemory" parent="Position2D" instance=ExtResource( 11 )]
+
+[node name="Position2D2" type="Position2D" parent="."]
+position = Vector2( 295, 397 )
+
+[node name="GreenMemory" parent="Position2D2" instance=ExtResource( 12 )]
+
+[node name="Position2D3" type="Position2D" parent="."]
+position = Vector2( 260, 397 )
+
+[node name="BlueMemory" parent="Position2D3" instance=ExtResource( 13 )]

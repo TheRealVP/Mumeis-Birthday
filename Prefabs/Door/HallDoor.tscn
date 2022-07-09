@@ -1,0 +1,248 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://3 - Background and Tiles/Objects/door1.png" type="Texture" id=1]
+[ext_resource path="res://Prefabs/Door/HallDoor.gd" type="Script" id=2]
+[ext_resource path="res://3 - Background and Tiles/greenmemory.png" type="Texture" id=3]
+[ext_resource path="res://3 - Background and Tiles/bluememory.png" type="Texture" id=4]
+[ext_resource path="res://3 - Background and Tiles/redmemory.png" type="Texture" id=5]
+[ext_resource path="res://Prefabs/Door/Pannel.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.5, 23 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Closed"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Opened"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("R:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.145098, 0.109804, 0.109804, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "turnon"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("R:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.145098, 0.109804, 0.109804, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.0156863, 0.101961, 0.0352941, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "turnon"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0156863, 0.101961, 0.0352941, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.0431373, 0.0784314, 0.196078, 1 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "turnon"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0431373, 0.0784314, 0.196078, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 7, 3 )
+
+[node name="HallDoor" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, 4 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/Closed = SubResource( 2 )
+anims/Opened = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+
+[node name="Pannel" type="Area2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="R" type="Sprite" parent="Pannel"]
+modulate = Color( 0.145098, 0.109804, 0.109804, 1 )
+position = Vector2( -47, 0 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 5 )
+
+[node name="RedPlayer" type="AnimationPlayer" parent="Pannel/R"]
+root_node = NodePath("../..")
+anims/RESET = SubResource( 6 )
+anims/turnon = SubResource( 7 )
+
+[node name="G" type="Sprite" parent="Pannel"]
+modulate = Color( 0.0156863, 0.101961, 0.0352941, 1 )
+position = Vector2( -42, 0 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 3 )
+
+[node name="GreenPlayer" type="AnimationPlayer" parent="Pannel/G"]
+anims/RESET = SubResource( 8 )
+anims/turnon = SubResource( 9 )
+
+[node name="B" type="Sprite" parent="Pannel"]
+modulate = Color( 0.0431373, 0.0784314, 0.196078, 1 )
+position = Vector2( -37, 0 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 4 )
+
+[node name="BluePlayer" type="AnimationPlayer" parent="Pannel/B"]
+anims/RESET = SubResource( 10 )
+anims/turnon = SubResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pannel"]
+position = Vector2( -42, 0 )
+shape = SubResource( 5 )
+
+[connection signal="all_found" from="Pannel" to="." method="_on_Pannel_all_found"]
+[connection signal="body_entered" from="Pannel" to="Pannel" method="_on_Pannel_body_entered"]
