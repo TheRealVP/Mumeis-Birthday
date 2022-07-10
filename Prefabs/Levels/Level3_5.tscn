@@ -365,7 +365,7 @@ points = PoolVector2Array( 17, 17, 0, 17, 0, 0, 17, 0 )
 1/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=51]
-extents = Vector2( 110.5, 81 )
+extents = Vector2( 79, 81 )
 
 [sub_resource type="RectangleShape2D" id=52]
 extents = Vector2( 81, 80 )
@@ -507,7 +507,7 @@ margin_right = 155.0
 margin_bottom = 98.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpeechArea"]
-position = Vector2( -179.5, 79 )
+position = Vector2( -148, 79 )
 shape = SubResource( 51 )
 
 [node name="PortArea" type="Area2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=1]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Prefabs/Door/SimpleDoor.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Coin/Coin.tscn" type="PackedScene" id=11]
 [ext_resource path="res://3 - Background and Tiles/tilesettrans.png" type="Texture" id=12]
+[ext_resource path="res://BlueMemory.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=78]
 points = PoolVector2Array( 11.2016, 0, 11.2794, 16, 4.81487, 16, 4.81487, 0 )
@@ -881,6 +882,11 @@ position = Vector2( 1416, -776 )
 position = Vector2( 1448, -856 )
 
 [node name="Enemies" type="Node" parent="."]
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 1855, 303 )
+
+[node name="BlueMemory" parent="Position2D" instance=ExtResource( 13 )]
 
 [editable path="Stuff/Sign"]
 [editable path="Stuff/Sign9"]

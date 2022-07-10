@@ -98,7 +98,7 @@ signtext = "Mine Shaft"
 
 [node name="Sign3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 792, 267 )
-signtext = "To the Main Room"
+signtext = "Hall of Questioning"
 
 [node name="Sign4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 345, 410 )
@@ -118,12 +118,6 @@ spawnPoint = 4
 [node name="SimpleDoor4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 873, 276 )
 level = "2_1"
-open = true
-spawnPoint = 1
-
-[node name="SimpleDoor6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 568, 468 )
-level = "3_6"
 open = true
 spawnPoint = 1
 
@@ -189,7 +183,7 @@ position = Vector2( 518, 403 )
 position = Vector2( -170, 500 )
 
 [node name="HallDoor" parent="." instance=ExtResource( 7 )]
-position = Vector2( 511, 468 )
+position = Vector2( 527, 468 )
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 392, 397 )

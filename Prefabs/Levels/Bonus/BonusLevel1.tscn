@@ -513,6 +513,7 @@ spawnPoint = 1
 
 [node name="SimpleDoor2" parent="Stuff" instance=ExtResource( 7 )]
 position = Vector2( 3968, 388 )
+level = "3_7"
 open = true
 spawnPoint = 1
 
@@ -825,8 +826,10 @@ position = Vector2( 1328, 136 )
 [node name="Boulder" parent="Enemies" instance=ExtResource( 14 )]
 position = Vector2( 72, 112 )
 
-[node name="RedMemory" parent="." instance=ExtResource( 11 )]
+[node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 4030, 403 )
+
+[node name="RedMemory" parent="Position2D" instance=ExtResource( 11 )]
 scale = Vector2( 0.1, 0.1 )
 
 [editable path="Stuff/Sign"]

@@ -24,4 +24,4 @@ func _on_PortArea_body_entered(body):
 		PlayerVariables.set_berries(body.coinNumber)
 		#if spawnPoint>0:
 		PlayerVariables.set_exit_point(0)
-		PlayerVariables.goto_scene("res://Prefabs/Levels/Level3_1.tscn" ) # Replace with function body.
+		PlayerVariables.goto_scene("res://Prefabs/Levels/Bonus/BonusLevel4.tscn" ) # Replace with function body.
