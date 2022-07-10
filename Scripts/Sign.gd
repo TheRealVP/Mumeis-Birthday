@@ -18,7 +18,7 @@ func _ready():
 
 func _on_Sign_body_entered(body):
 	if body.name=="Player":
-		$signtext.text= signtext # Replace with function body.
+		$signtext.text= signtext.replace("\\n", "\n") # Replace with function body.
 
 
 func _on_Sign_body_exited(body):
