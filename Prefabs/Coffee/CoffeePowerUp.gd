@@ -5,14 +5,14 @@ onready var pb = $Panel/ProgressBar
 onready var player = get_node("..")
 
 
-var caffeine = 2
+var power = 2
 
 
 func _ready():
 	timer.wait_time = pb.value
-	player.speed = player.speed * caffeine
-	player.maxSpeed = player.maxSpeed * caffeine
-	player.invulnerable = true
+	player.speed = player.speed * power
+	player.maxSpeed = player.maxSpeed * power
+	player.caffeine += 1
 
 
 func _process(_delta):
@@ -21,7 +21,7 @@ func _process(_delta):
 
 
 func _on_Timer_timeout():
-	player.speed = player.speed / caffeine
-	player.maxSpeed = player.maxSpeed / caffeine
-	player.invulnerable = false
+	player.speed = player.speed / power
+	player.maxSpeed = player.maxSpeed / power
+	player.caffeine -= 1
 	queue_free()

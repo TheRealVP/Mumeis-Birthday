@@ -20,7 +20,7 @@ var canSlash = false
 var isSwooping = false
 var laddering = false
 
-var invulnerable = false
+var caffeine = 0
 
 var lives = PlayerVariables.lives
 
@@ -164,7 +164,7 @@ func play_swoop():
 	$SFX.play()
 
 func hurt(damage):
-	if invulnerable == true:
+	if caffeine >= 1:
 		pass
 	else:
 		play_hurt()
