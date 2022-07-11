@@ -150,7 +150,7 @@ position = Vector2( 192, 165 )
 position = Vector2( 1631, -49 )
 
 [node name="exitpoint3" type="Position2D" parent="."]
-position = Vector2( -254, 172 )
+position = Vector2( 749, 170 )
 
 [node name="exitpoint4" type="Position2D" parent="."]
 position = Vector2( -256, 176 )

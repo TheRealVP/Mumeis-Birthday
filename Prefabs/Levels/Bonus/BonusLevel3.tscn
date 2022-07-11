@@ -583,7 +583,6 @@ tile_data = PoolIntArray( -4849653, 4, 0, -4849652, 4, 0, -4849651, 4, 0, -48496
 script = ExtResource( 5 )
 
 [node name="Fog" type="TextureRect" parent="GUI"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 7 )
@@ -760,7 +759,9 @@ autowrap = true
 
 [node name="SimpleDoor" parent="Stuff" instance=ExtResource( 10 )]
 position = Vector2( 1928, 291 )
+level = "3_3"
 open = true
+spawnPoint = 3
 
 [node name="Collectibles" type="Node" parent="."]
 

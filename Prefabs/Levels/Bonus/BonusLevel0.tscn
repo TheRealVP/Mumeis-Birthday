@@ -452,7 +452,7 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 position = Vector2( 312, 214 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
-position = Vector2( 360, 722 )
+position = Vector2( -224, -6 )
 z_index = 6
 collision_mask = 3
 
@@ -678,6 +678,7 @@ spawnPoint = 1
 
 [node name="SimpleDoor2" parent="Stuff" instance=ExtResource( 16 )]
 position = Vector2( 184, 490 )
+level = "2_1"
 spawnPoint = 1
 
 [node name="Platforms" type="Node" parent="."]
