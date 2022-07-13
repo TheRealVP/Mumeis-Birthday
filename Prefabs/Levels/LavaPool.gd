@@ -15,7 +15,7 @@ func _process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body.name=="Player":
-			if body.invulnerable ==false:
+			if body.caffeine==0:
 				body.hurt(body.lives)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

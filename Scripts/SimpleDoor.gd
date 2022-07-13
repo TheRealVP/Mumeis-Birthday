@@ -19,8 +19,8 @@ func _process(delta):
 			if body.name=="Player":
 				PlayerVariables.set_lives(body.lives)
 				PlayerVariables.set_berries(body.coinNumber)
-				#if spawnPoint>0:
-				PlayerVariables.set_exit_point(spawnPoint)
+				if spawnPoint>0:
+					PlayerVariables.set_exit_point(spawnPoint)
 				PlayerVariables.goto_scene("res://Prefabs/Levels/Level" + level + ".tscn" )
 				#get_tree().change_scene("res://Prefabs/Levels/Level" + str(int(level)) + ".tscn" )
 

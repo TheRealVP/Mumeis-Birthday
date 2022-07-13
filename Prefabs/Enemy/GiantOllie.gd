@@ -69,6 +69,7 @@ func _on_hitBox_area_entered(area):
 			queue_free()
 			
 func onDestroyed():
+	MusicController.play_exploration_theme()
 	var coin = coinScene.instance()
 	coin.global_position= global_position
 	get_tree().get_root().add_child(coin)
