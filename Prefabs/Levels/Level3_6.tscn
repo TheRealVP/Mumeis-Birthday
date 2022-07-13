@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Prefabs/Levels/tilesetforall.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://Memories/jumpking.jpg" type="Texture" id=31]
 [ext_resource path="res://Memories/hikarunara.jpg" type="Texture" id=32]
 [ext_resource path="res://8 - Texture/sprites_0.png" type="Texture" id=33]
+[ext_resource path="res://Prefabs/Coin/Coin.tscn" type="PackedScene" id=34]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 81 )
@@ -298,6 +299,42 @@ texture = ExtResource( 32 )
 position = Vector2( 5121, 103 )
 scale = Vector2( 0.00903325, 0.00927734 )
 texture = ExtResource( 33 )
+
+[node name="Coin" parent="." instance=ExtResource( 34 )]
+position = Vector2( 3800, 172 )
+
+[node name="Coin2" parent="." instance=ExtResource( 34 )]
+position = Vector2( 3863, 172 )
+
+[node name="Coin3" parent="." instance=ExtResource( 34 )]
+position = Vector2( 3842, 172 )
+
+[node name="Coin4" parent="." instance=ExtResource( 34 )]
+position = Vector2( 3821, 172 )
+
+[node name="Coin5" parent="." instance=ExtResource( 34 )]
+position = Vector2( 3884, 172 )
+
+[node name="Coin6" parent="." instance=ExtResource( 34 )]
+position = Vector2( 3947, 172 )
+
+[node name="Coin7" parent="." instance=ExtResource( 34 )]
+position = Vector2( 3926, 172 )
+
+[node name="Coin8" parent="." instance=ExtResource( 34 )]
+position = Vector2( 3905, 172 )
+
+[node name="Coin9" parent="." instance=ExtResource( 34 )]
+position = Vector2( 3968, 172 )
+
+[node name="Coin10" parent="." instance=ExtResource( 34 )]
+position = Vector2( 4031, 172 )
+
+[node name="Coin11" parent="." instance=ExtResource( 34 )]
+position = Vector2( 4010, 172 )
+
+[node name="Coin12" parent="." instance=ExtResource( 34 )]
+position = Vector2( 3989, 172 )
 
 [connection signal="body_entered" from="ANewStartCheckpoint" to="ANewStartCheckpoint" method="_on_ANewStartCheckpoint_body_entered"]
 [connection signal="body_entered" from="KroniiPort" to="KroniiPort" method="_on_KroniiPort_body_entered"]
