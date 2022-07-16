@@ -254,6 +254,7 @@ shape = SubResource( 6 )
 disabled = true
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
+bus = "SFX"
 
 [connection signal="body_entered" from="TargetArea" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="TargetArea" to="." method="_on_Area2D_body_exited"]

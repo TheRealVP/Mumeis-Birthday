@@ -1,9 +1,16 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://0 - AsepriteFiles/nightmarebunkeronii.jpg" type="Texture" id=1]
 [ext_resource path="res://6 - UI/VolumeBar.png" type="Texture" id=2]
 [ext_resource path="res://6 - UI/VolumeSlider.png" type="Texture" id=3]
 [ext_resource path="res://Prefabs/Menus/SettingsMenu.gd" type="Script" id=4]
+[ext_resource path="res://6 - UI/JungleAdventurer.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://6 - UI/BlueButton.png" type="Texture" id=6]
+[ext_resource path="res://6 - UI/BlueButtonPressed.png" type="Texture" id=7]
+[ext_resource path="res://6 - UI/SettingsBackground.png" type="Texture" id=8]
+[ext_resource path="res://6 - UI/TickIcon.png" type="Texture" id=9]
+[ext_resource path="res://6 - UI/TickBox.png" type="Texture" id=10]
+[ext_resource path="res://Prefabs/Menus/Back.gd" type="Script" id=11]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 2 )
@@ -12,6 +19,36 @@ region_rect = Rect2( 0, 0, 660, 135 )
 [sub_resource type="StyleBoxTexture" id=2]
 
 [sub_resource type="StyleBoxTexture" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=11]
+font_data = ExtResource( 5 )
+
+[sub_resource type="ImageTexture" id=12]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -24,11 +61,17 @@ margin_bottom = 598.0
 texture = ExtResource( 1 )
 expand = true
 
-[node name="BGMSlider" type="HSlider" parent="."]
-margin_left = 18.0
-margin_top = 291.0
-margin_right = 678.0
-margin_bottom = 426.0
+[node name="SettingsBackground" type="Sprite" parent="."]
+position = Vector2( 550.25, 305.75 )
+scale = Vector2( 0.711276, 0.766383 )
+texture = ExtResource( 8 )
+
+[node name="MasterSlider" type="HSlider" parent="."]
+margin_left = 324.0
+margin_top = 84.0
+margin_right = 984.0
+margin_bottom = 219.0
+rect_scale = Vector2( 0.3, 0.3 )
 custom_icons/tick = ExtResource( 3 )
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
@@ -39,4 +82,126 @@ custom_styles/grabber_area = SubResource( 3 )
 min_value = -30.0
 max_value = 0.0
 
+[node name="BGMSlider" type="HSlider" parent="."]
+margin_left = 324.0
+margin_top = 164.0
+margin_right = 984.0
+margin_bottom = 299.0
+rect_scale = Vector2( 0.3, 0.3 )
+custom_icons/tick = ExtResource( 3 )
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 1 )
+custom_styles/grabber_area_highlight = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 3 )
+min_value = -30.0
+max_value = 0.0
+
+[node name="SFXSlider" type="HSlider" parent="."]
+margin_left = 323.0
+margin_top = 239.0
+margin_right = 983.0
+margin_bottom = 374.0
+rect_scale = Vector2( 0.3, 0.3 )
+custom_icons/tick = ExtResource( 3 )
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 1 )
+custom_styles/grabber_area_highlight = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 3 )
+min_value = -30.0
+max_value = 0.0
+
+[node name="Button" type="Button" parent="."]
+margin_left = 326.0
+margin_top = 496.0
+margin_right = 453.0
+margin_bottom = 532.0
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+text = "Back to Main"
+script = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 336.0
+margin_top = 62.0
+margin_right = 514.0
+margin_bottom = 76.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Master Volume"
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 613.0
+margin_top = 95.0
+margin_right = 791.0
+margin_bottom = 112.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Mute All Sound"
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 612.0
+margin_top = 174.0
+margin_right = 790.0
+margin_bottom = 191.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Mute BGM"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 337.0
+margin_top = 140.0
+margin_right = 515.0
+margin_bottom = 157.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "BGM Volume"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 338.0
+margin_top = 215.0
+margin_right = 516.0
+margin_bottom = 232.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "SFX Volume"
+
+[node name="TickBox" type="Sprite" parent="."]
+position = Vector2( 584, 104 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 10 )
+
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 564.0
+margin_top = 84.0
+margin_right = 772.0
+margin_bottom = 290.0
+rect_scale = Vector2( 0.2, 0.2 )
+custom_icons/checked = ExtResource( 9 )
+custom_icons/unchecked = SubResource( 12 )
+
+[node name="TickBox2" type="Sprite" parent="."]
+position = Vector2( 584, 184 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 10 )
+
+[node name="CheckBox2" type="CheckBox" parent="."]
+margin_left = 564.0
+margin_top = 164.0
+margin_right = 772.0
+margin_bottom = 370.0
+rect_scale = Vector2( 0.2, 0.2 )
+custom_icons/checked = ExtResource( 9 )
+custom_icons/unchecked = SubResource( 12 )
+
+[connection signal="value_changed" from="MasterSlider" to="." method="_on_MasterSlider_value_changed"]
 [connection signal="value_changed" from="BGMSlider" to="." method="_on_BGMSlider_value_changed"]
+[connection signal="value_changed" from="SFXSlider" to="." method="_on_SFXSlider_value_changed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
