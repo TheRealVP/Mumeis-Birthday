@@ -178,7 +178,7 @@ position = Vector2( 584, 104 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 10 )
 
-[node name="CheckBox" type="CheckBox" parent="."]
+[node name="MuteAll" type="CheckBox" parent="."]
 margin_left = 564.0
 margin_top = 84.0
 margin_right = 772.0
@@ -192,7 +192,7 @@ position = Vector2( 584, 184 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 10 )
 
-[node name="CheckBox2" type="CheckBox" parent="."]
+[node name="MuteBgm" type="CheckBox" parent="."]
 margin_left = 564.0
 margin_top = 164.0
 margin_right = 772.0
@@ -205,3 +205,5 @@ custom_icons/unchecked = SubResource( 12 )
 [connection signal="value_changed" from="BGMSlider" to="." method="_on_BGMSlider_value_changed"]
 [connection signal="value_changed" from="SFXSlider" to="." method="_on_SFXSlider_value_changed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="toggled" from="MuteAll" to="." method="_on_MuteAll_toggled"]
+[connection signal="toggled" from="MuteBgm" to="." method="_on_MuteBgm_toggled"]

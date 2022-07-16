@@ -1047,3 +1047,4 @@ signtext = "Door will open when all crops are harvested."
 
 [node name="SuccessSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
+bus = "SFX"

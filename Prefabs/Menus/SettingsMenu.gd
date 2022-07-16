@@ -14,3 +14,11 @@ func _on_BGMSlider_value_changed(value):
 
 func _on_SFXSlider_value_changed(value):
 	AudioServer.set_bus_volume_db(sfx_bus, value) # Replace with function body.
+
+
+func _on_MuteAll_toggled(button_pressed):
+	AudioServer.set_bus_mute(master_bus, button_pressed) # Replace with function body.
+
+
+func _on_MuteBgm_toggled(button_pressed):
+	AudioServer.set_bus_mute(bgm_bus, button_pressed) # Replace with function body.
