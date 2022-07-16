@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://0 - AsepriteFiles/nightmarebunkeronii.jpg" type="Texture" id=1]
 [ext_resource path="res://6 - UI/JungleAdventurer.ttf" type="DynamicFontData" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://6 - UI/BlueButton.png" type="Texture" id=9]
 [ext_resource path="res://6 - UI/BlueButtonPressed.png" type="Texture" id=10]
 [ext_resource path="res://6 - UI/CloseButton.png" type="Texture" id=11]
+[ext_resource path="res://Prefabs/Menus/SettingsButton.gd" type="Script" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 74
@@ -82,9 +83,9 @@ custom_fonts/font = SubResource( 1 )
 text = "Mumei's Bizarre Adventure!"
 
 [node name="Button" type="Button" parent="."]
-margin_left = 205.0
+margin_left = 163.0
 margin_top = 451.0
-margin_right = 353.0
+margin_right = 311.0
 margin_bottom = 502.0
 rect_pivot_offset = Vector2( -12, -12 )
 custom_fonts/font = SubResource( 2 )
@@ -99,9 +100,9 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 389.0
+margin_left = 341.0
 margin_top = 450.0
-margin_right = 537.0
+margin_right = 489.0
 margin_bottom = 501.0
 rect_pivot_offset = Vector2( -12, -12 )
 custom_fonts/font = SubResource( 3 )
@@ -115,10 +116,27 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="Button4" type="Button" parent="."]
+margin_left = 520.0
+margin_top = 450.0
+margin_right = 668.0
+margin_bottom = 501.0
+rect_pivot_offset = Vector2( -12, -12 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "Settings"
+script = ExtResource( 12 )
+__meta__ = {
+"_editor_description_": ""
+}
+
 [node name="Button3" type="Button" parent="."]
-margin_left = 583.0
+margin_left = 677.0
 margin_top = 449.0
-margin_right = 731.0
+margin_right = 825.0
 margin_bottom = 500.0
 rect_pivot_offset = Vector2( -12, -12 )
 custom_fonts/font = SubResource( 4 )
@@ -131,4 +149,5 @@ __meta__ = {
 
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_Button4_pressed"]
 [connection signal="pressed" from="Button3" to="Button3" method="_on_Button3_pressed"]

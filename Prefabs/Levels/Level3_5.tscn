@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://3 - Background and Tiles/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=17]
+[ext_resource path="res://6 - UI/JungleAdventurer.ttf" type="DynamicFontData" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=48]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -364,6 +365,9 @@ points = PoolVector2Array( 17, 17, 0, 17, 0, 0, 17, 0 )
 1/shapes = [  ]
 1/z_index = 0
 
+[sub_resource type="DynamicFont" id=56]
+font_data = ExtResource( 18 )
+
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 79, 81 )
 
@@ -505,6 +509,7 @@ margin_left = -20.0
 margin_top = 65.0
 margin_right = 155.0
 margin_bottom = 98.0
+custom_fonts/font = SubResource( 56 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpeechArea"]
 position = Vector2( -148, 79 )
@@ -523,6 +528,7 @@ margin_left = -1162.0
 margin_top = -445.0
 margin_right = 712.0
 margin_bottom = 521.0
+rect_rotation = -0.965627
 color = Color( 1, 1, 1, 0 )
 
 [node name="anim" type="AnimationPlayer" parent="PortArea"]

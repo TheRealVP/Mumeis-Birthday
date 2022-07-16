@@ -9,6 +9,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	MusicController.play_main_theme()
+	PlayerVariables.reset_key()
 	randomize()
 	var rng = randi()%21 # Replace with function body.
 	if rng == 1:

@@ -85,6 +85,9 @@ func set_checkpoint_reached():
 func set_anewstart_reached():
 	anewstart_reached=true
 	
+func reset_key():
+	main_room_key=false
+	
 func a_newer_start():
 	var lives = 3
 	var berries = 0
