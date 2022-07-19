@@ -1,9 +1,8 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Prefabs/Levels/backgroundforall.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Enemy/GiantOllie.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/Door/OllieBossDoor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Levels/BossPortArea.gd" type="Script" id=5]
 [ext_resource path="res://6 - UI/VolumeBar.png" type="Texture" id=6]
 [ext_resource path="res://Prefabs/Levels/tilesetforall.tres" type="TileSet" id=7]
@@ -181,9 +180,6 @@ scale = Vector2( 2, 2 )
 
 [node name="Coffee" parent="." instance=ExtResource( 9 )]
 position = Vector2( -348, -122 )
-
-[node name="OllieBossDoor" parent="." instance=ExtResource( 4 )]
-position = Vector2( -64, 131 )
 
 [node name="FlashArea" type="Area2D" parent="."]
 script = ExtResource( 5 )
