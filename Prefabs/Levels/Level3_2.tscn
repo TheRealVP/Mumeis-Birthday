@@ -153,6 +153,7 @@ position = Vector2( -106, 154 )
 
 [node name="torch2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 112, 154 )
+z_index = -1
 
 [node name="torch3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 384, 154 )

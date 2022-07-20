@@ -197,6 +197,7 @@ shape = SubResource( 48 )
 
 [node name="SimpleDoor" parent="." instance=ExtResource( 4 )]
 position = Vector2( 192, 164 )
+z_index = -1
 script = ExtResource( 11 )
 
 [connection signal="body_entered" from="SecretArea" to="SecretArea" method="_on_SecretArea_body_entered"]

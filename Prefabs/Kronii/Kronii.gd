@@ -8,7 +8,7 @@ var direction_x=1
 var direction_y=1
 var flip=1
 var counter=1
-var lives=15
+var lives=1
 
 signal kronii_is_hit
 
@@ -86,6 +86,17 @@ func playHit():
 	$SFX.stream= gwak
 	$SFX.play()
 	$GwakTimer.start()
+	$Animation.set_modulate(Color(1,0,0))
+	var timer := Timer.new()
+	add_child(timer)
+	timer.wait_time = 0.3
+	timer.one_shot = true
+	timer.start()
+	timer.connect("timeout", self, "_on_timer_timeout")
+
+func _on_timer_timeout() -> void:
+	$Animation.set_modulate(Color(1,1,1))
+	
 
 func _on_GwakTimer_timeout():
 	$SFX.stop() # Replace with function body.
