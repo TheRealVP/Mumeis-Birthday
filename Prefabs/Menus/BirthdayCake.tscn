@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://8 - Texture/cartoon-cake.png" type="Texture" id=1]
 [ext_resource path="res://6 - UI/JungleAdventurer.ttf" type="DynamicFontData" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://6 - UI/BlueButtonPressed.png" type="Texture" id=6]
 [ext_resource path="res://6 - UI/GreenButtonPressed.png" type="Texture" id=7]
 [ext_resource path="res://Prefabs/Menus/ANewerStart.gd" type="Script" id=8]
+[ext_resource path="res://Prefabs/Menus/DevMessage.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -26,6 +27,70 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:visible_characters")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label2:visible_characters")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Label2:percent_visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "creditstext"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label2:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "playtext"
@@ -42,6 +107,9 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
+
+[sub_resource type="DynamicFont" id=13]
+font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 5 )
@@ -77,6 +145,9 @@ region_rect = Rect2( 0, 0, 260, 176 )
 [sub_resource type="StyleBoxTexture" id=11]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 260, 176 )
+
+[sub_resource type="DynamicFont" id=14]
+font_data = ExtResource( 2 )
 
 [node name="BirthdayCake" type="Control"]
 anchor_right = 1.0
@@ -120,18 +191,21 @@ percent_visible = 0.0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "playtext"
 anims/RESET = SubResource( 2 )
+anims/creditstext = SubResource( 15 )
 anims/playtext = SubResource( 3 )
 
-[node name="Button" type="Button" parent="."]
+[node name="DevMessage" type="Button" parent="."]
 margin_left = 550.0
 margin_top = 494.0
 margin_right = 675.0
 margin_bottom = 543.0
+custom_fonts/font = SubResource( 13 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 6 )
 custom_styles/normal = SubResource( 7 )
 text = "Dev Message"
+script = ExtResource( 9 )
 
 [node name="ANewerStart" type="Button" parent="."]
 margin_left = 382.0
@@ -146,4 +220,38 @@ custom_styles/normal = SubResource( 11 )
 text = "Back to Main"
 script = ExtResource( 8 )
 
+[node name="Label2" type="Label" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 1177.0
+margin_bottom = 382.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.439216, 0.439216, 0.439216, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "V P - Coding and mechanics, designing boring and tough levels, Boss fights, project management
+Anonymous One - Designing cool and fun levels, assistant mechanics work
+Superappleman - Character design
+Captain Meow - BGMs
+Mǎlíngshǔ - Tilesets
+HikariKyuubi, akumei - Playtesting
+
+
+
+
+I have been daydreaming on and off about making videogames since the day I first grabbed a Mega Drive controller, many years ago.
+ Even though this dream of mine was never truly dead, it never found something that it could latch on and reach its conclusion. 
+
+As things in life goes, I eventually resigned myself to accept that making a game people would play and enjoy was simply a childhood
+fancy that would never come to pass, even if this was the whole reason I embarked on the path of IT.
+
+                                                                                                  Until now.
+
+Nanashi Mumei, thank you for breathing life back to this forgotten dream. I would never have happened without your inspirational 
+presence which gave the whole team the driving force to push through and do our level best, just as you do every time you appear on 
+screen, in good days and bad days. Have a great year to come and get ready to rule the VTuber world!
+
+And thank you for playing. You, yes you. The person in front of the screen. Thank you whomever you are for reaching up to this point! "
+percent_visible = 0.0
+
+[connection signal="pressed" from="DevMessage" to="." method="_on_DevMessage_pressed"]
 [connection signal="pressed" from="ANewerStart" to="ANewerStart" method="_on_ANewerStart_pressed"]
