@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lazor.mp3-0649836014e7e18c362c87029ee81d97.mp3str"
+
+[deps]
+
+source_file="res://Sounds/lazor.mp3"
+dest_files=[ "res://.import/lazor.mp3-0649836014e7e18c362c87029ee81d97.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

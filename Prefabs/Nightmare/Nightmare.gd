@@ -6,6 +6,7 @@ onready var BULLET_SCENE = preload("res://Prefabs/Bullet/Bullet.tscn")
 # var b = "text"
 
 var dead= load("res://Sounds/monstercry.wav" )
+var lazor = load( "res://Sounds/lazor.mp3" )
 var target = null
 var dying = false
 # Called when the node enters the scene tree for the first time.
@@ -24,12 +25,15 @@ func doCharge():
 func doFade():
 	$anim.play("Fade")
 	yield(get_node("anim"), "animation_finished")
+	$SFX.stop()
 	doCharge()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 func fire():
 	print("Firing")
+	$SFX.stream= lazor
+	$SFX.play()
 	var bullet= BULLET_SCENE.instance()
 	
 	bullet.position = self.position

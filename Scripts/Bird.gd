@@ -8,6 +8,7 @@ var dying = false
 var original_level = self.position.y
 var hit=false
 var swooped=false
+var crowfx = load ("res://Sounds/crownii.mp3" )
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -57,6 +58,10 @@ func _on_hitBox_body_entered(body):
 
 func _on_hitBox_area_entered(area):
 	if area.is_in_group("Sword"):
+		$SFX.stream= crowfx
+		$SFX.play()
+		$anim.play("death")
+		yield(get_node("anim"), "animation_finished")
 		onDestroyed()
 		queue_free()
 		

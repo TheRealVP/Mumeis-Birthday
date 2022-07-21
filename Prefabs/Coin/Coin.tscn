@@ -182,4 +182,7 @@ anims/Idle = SubResource( 45 )
 anims/Picked = SubResource( 47 )
 anims/RESET = SubResource( 46 )
 
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+bus = "SFX"
+
 [connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]

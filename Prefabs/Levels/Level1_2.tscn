@@ -141,7 +141,7 @@ z_index = 8
 texture = ExtResource( 10 )
 
 [node name="icon" type="Sprite" parent="zetanote"]
-position = Vector2( -8.955, -24.375 )
+position = Vector2( 0.0449219, -0.375 )
 scale = Vector2( 0.0401523, 0.0409091 )
 texture = ExtResource( 11 )
 

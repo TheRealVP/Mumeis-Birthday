@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/crownii.mp3-80a030816ca54064924ff1aee1afc473.mp3str"
+
+[deps]
+
+source_file="res://Sounds/crownii.mp3"
+dest_files=[ "res://.import/crownii.mp3-80a030816ca54064924ff1aee1afc473.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

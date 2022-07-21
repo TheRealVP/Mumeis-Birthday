@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/berrycrunchy.mp3-76477e63346a0f68b6195388baa8f80f.mp3str"
+
+[deps]
+
+source_file="res://Sounds/berrycrunchy.mp3"
+dest_files=[ "res://.import/berrycrunchy.mp3-76477e63346a0f68b6195388baa8f80f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

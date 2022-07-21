@@ -535,6 +535,9 @@ color = Color( 1, 1, 1, 0 )
 anims/RESET = SubResource( 53 )
 "anims/fade out" = SubResource( 54 )
 
+[node name="SFX" type="AudioStreamPlayer2D" parent="PortArea"]
+bus = "SFX"
+
 [node name="BackToShaftArea" type="Area2D" parent="."]
 position = Vector2( -368, 389 )
 script = ExtResource( 13 )
