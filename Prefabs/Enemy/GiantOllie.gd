@@ -13,7 +13,7 @@ signal ollie_is_hit
 
 signal ollie_is_dead
 
-
+var lazorfx= load("res://Sounds/lazor.mp3")
 
 var lives = 30
 
@@ -75,6 +75,10 @@ func onDestroyed():
 	get_tree().get_root().add_child(coin)
 
 func fire():
+	$SFX.stream= lazorfx
+	$SFX.play()
+	yield(get_tree().create_timer(0.7),"timeout")
+	$SFX.stop()
 	var bullet= BULLET_SCENE.instance()
 	var bullet2= BULLET_SCENE.instance()
 	

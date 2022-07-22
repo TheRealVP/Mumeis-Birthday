@@ -4,7 +4,7 @@ extends Area2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+var transitionfx= load ( "res://Sounds/magic_transition.mp3" )
 var target=null
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,6 +17,8 @@ func _ready():
 
 
 func _on_GiantOllie_ollie_is_dead():
+	$SFX.stream = transitionfx
+	$SFX.play()
 	$anim.play("flashing")
 	yield(get_node("anim"), "animation_finished")
 	PlayerVariables.set_lives(target.lives)

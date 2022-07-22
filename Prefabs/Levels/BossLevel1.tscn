@@ -201,6 +201,9 @@ anims/waiting = SubResource( 52 )
 position = Vector2( -38, 37 )
 shape = SubResource( 53 )
 
+[node name="SFX" type="AudioStreamPlayer2D" parent="FlashArea"]
+bus = "SFX"
+
 [connection signal="ollie_is_dead" from="GiantOllie" to="FlashArea" method="_on_GiantOllie_ollie_is_dead"]
 [connection signal="ollie_is_hit" from="GiantOllie" to="GUI" method="_on_GiantOllie_ollie_is_hit"]
 [connection signal="body_entered" from="FlashArea" to="FlashArea" method="_on_FlashArea_body_entered"]
