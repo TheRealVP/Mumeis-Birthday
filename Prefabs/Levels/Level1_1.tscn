@@ -165,4 +165,4 @@ position = Vector2( 650, 200 )
 
 [node name="MainRoomDoor1" parent="." instance=ExtResource( 11 )]
 position = Vector2( 866, 276 )
-level = "2_1"
+level = "1_6"
