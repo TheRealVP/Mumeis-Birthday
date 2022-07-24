@@ -8,7 +8,7 @@ var direction_x=1
 var direction_y=1
 var flip=1
 var counter=1
-var lives=1
+var lives=15
 
 signal kronii_is_hit
 
