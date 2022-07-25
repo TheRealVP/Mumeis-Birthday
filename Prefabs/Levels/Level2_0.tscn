@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://3 - Background and Tiles/tiles.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Prefabs/Enemy/pathPoint.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Levels/shortcutto2_2.gd" type="Script" id=9]
 [ext_resource path="res://3 - Background and Tiles/blockSprite.png" type="Texture" id=10]
+[ext_resource path="res://Prefabs/Levels/shortcutto1_2.gd" type="Script" id=11]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=14]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
@@ -956,6 +957,14 @@ script = ExtResource( 9 )
 position = Vector2( 5, 12 )
 shape = SubResource( 77 )
 
+[node name="shortcutto1_2" type="Area2D" parent="."]
+position = Vector2( 523, 362 )
+script = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="shortcutto1_2"]
+position = Vector2( -747, 25 )
+shape = SubResource( 77 )
+
 [node name="pathPoint" parent="." groups=["Pathpoint"] instance=ExtResource( 8 )]
 position = Vector2( 29, 16 )
 scale = Vector2( 2, 2 )
@@ -981,3 +990,4 @@ position = Vector2( 128, -83 )
 scale = Vector2( 2, 2 )
 
 [connection signal="body_entered" from="shortcutto2_2" to="shortcutto2_2" method="_on_shortcutto2_2_body_entered"]
+[connection signal="body_entered" from="shortcutto1_2" to="shortcutto1_2" method="_on_shortcutto2_2_body_entered"]

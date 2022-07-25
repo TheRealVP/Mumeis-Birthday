@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Prefabs/Levels/tilesetforall.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://3 - Background and Tiles/Medieval_Castle_Asset_Pack/Decorations/table_shadow.png" type="Texture" id=19]
 [ext_resource path="res://3 - Background and Tiles/torch.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Prefabs/Coffee/Coffee.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scripts/Level1_1.gd" type="Script" id=22]
 
 [sub_resource type="RectangleShape2D" id=48]
 extents = Vector2( 15.5, 10 )
@@ -29,6 +30,7 @@ extents = Vector2( 15.5, 10 )
 
 [node name="Level1_2" type="Node2D"]
 position = Vector2( 312, 214 )
+script = ExtResource( 22 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -311, -215 )
@@ -173,6 +175,9 @@ position = Vector2( -51, -47 )
 
 [node name="Coffee" parent="." instance=ExtResource( 21 )]
 position = Vector2( -25, 134 )
+
+[node name="exitpoint2" type="Position2D" parent="."]
+position = Vector2( -176, -28 )
 
 [connection signal="body_entered" from="SecretArea" to="SecretArea" method="_on_SecretArea_body_entered"]
 [connection signal="body_entered" from="zetanote" to="zetanote" method="_on_zetanote_body_entered"]
