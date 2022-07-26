@@ -95,8 +95,8 @@ texture = ExtResource( 6 )
 [node name="Button" type="Button" parent="."]
 margin_left = 803.0
 margin_top = 222.0
-margin_right = 908.0
-margin_bottom = 256.0
+margin_right = 951.0
+margin_bottom = 273.0
 rect_pivot_offset = Vector2( -12, -12 )
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 6 )
@@ -110,10 +110,10 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 808.0
-margin_top = 268.0
-margin_right = 900.0
-margin_bottom = 301.0
+margin_left = 811.0
+margin_top = 284.0
+margin_right = 959.0
+margin_bottom = 335.0
 custom_fonts/font = SubResource( 3 )
 custom_styles/hover = SubResource( 10 )
 custom_styles/pressed = SubResource( 11 )
