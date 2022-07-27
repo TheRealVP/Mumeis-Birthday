@@ -7,7 +7,8 @@ func _ready():
 
 
 func _on_FogController_body_entered(body):
-	if fog.visible == false:
-		fog.visible = true
-	else:
-		fog.visible = false
+	if body.name=="Player":
+		if fog.visible == false:
+			fog.visible = true
+		else:
+			fog.visible = false
