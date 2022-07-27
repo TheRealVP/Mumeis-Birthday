@@ -779,37 +779,37 @@ mass = 0.32
 gravity_scale = 0.8
 continuous_cd = 2
 
-[node name="Enemy2" parent="Enemies" instance=ExtResource( 15 )]
+[node name="Enemy2" parent="." instance=ExtResource( 15 )]
 position = Vector2( 896, -80 )
 
-[node name="pathPoint2" parent="Enemies" groups=["Pathpoint"] instance=ExtResource( 13 )]
+[node name="pathPoint2" parent="." groups=["Pathpoint"] instance=ExtResource( 13 )]
 position = Vector2( 864, -80 )
 
-[node name="pathPoint3" parent="Enemies" groups=["Pathpoint"] instance=ExtResource( 13 )]
+[node name="pathPoint3" parent="." groups=["Pathpoint"] instance=ExtResource( 13 )]
 position = Vector2( 1009, -80 )
 
-[node name="Enemy3" parent="Enemies" instance=ExtResource( 15 )]
+[node name="Enemy3" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1192, -80 )
 
-[node name="pathPoint4" parent="Enemies" groups=["Pathpoint"] instance=ExtResource( 13 )]
+[node name="pathPoint4" parent="." groups=["Pathpoint"] instance=ExtResource( 13 )]
 position = Vector2( 1285, -80 )
 
-[node name="pathPoint5" parent="Enemies" groups=["Pathpoint"] instance=ExtResource( 13 )]
+[node name="pathPoint5" parent="." groups=["Pathpoint"] instance=ExtResource( 13 )]
 position = Vector2( 1152, -80 )
 
-[node name="Enemy7" parent="Enemies" instance=ExtResource( 15 )]
+[node name="Enemy7" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1744, -80 )
 
-[node name="pathPoint9" parent="Enemies" groups=["Pathpoint"] instance=ExtResource( 13 )]
+[node name="pathPoint9" parent="." groups=["Pathpoint"] instance=ExtResource( 13 )]
 position = Vector2( 1800, -80 )
 
-[node name="pathPoint10" parent="Enemies" groups=["Pathpoint"] instance=ExtResource( 13 )]
+[node name="pathPoint10" parent="." groups=["Pathpoint"] instance=ExtResource( 13 )]
 position = Vector2( 1704, -80 )
 
-[node name="Enemy8" parent="Enemies" instance=ExtResource( 15 )]
+[node name="Enemy8" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1648, -80 )
 
-[node name="pathPoint12" parent="Enemies" groups=["Pathpoint"] instance=ExtResource( 13 )]
+[node name="pathPoint12" parent="." groups=["Pathpoint"] instance=ExtResource( 13 )]
 position = Vector2( 1608, -80 )
 
 [connection signal="is_triggered" from="Stuff/Lever" to="Stuff/Exit" method="_on_Lever_is_triggered"]
