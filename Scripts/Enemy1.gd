@@ -50,10 +50,13 @@ func _on_hitBox_body_entered(body):
 func _on_hitBox_area_entered(area):
 	if area.is_in_group("Sword"):
 		lives -=1
-		if velocity.x >=0:
+		var player = get_node("../Player")
+		self.position.x
+		print(player.position.x)
+		if player.position.x >=self.position.x:
 			velocity.y=-73
 			velocity.x=-53 #these two were flipped
-		elif velocity.x<=0:
+		elif  player.position.x<=self.position.x:
 			velocity.y=-73
 			velocity.x=53
 		$anim.play("Hurt")
