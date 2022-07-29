@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://3 - Background and Tiles/tiles.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Prefabs/Coffee/Coffee.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Prefabs/Lever/Lever.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scripts/Level1_1.gd" type="Script" id=22]
+[ext_resource path="res://Prefabs/Door/BonusLevel5Door.gd" type="Script" id=23]
 
 [sub_resource type="ConvexPolygonShape2D" id=48]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -952,6 +953,7 @@ tile_set = SubResource( 47 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
+tile_data = PoolIntArray( -2097146, 0, 0, -2097145, 0, 0, -2097144, 0, 0, -2031610, 0, 0, -2031609, 0, 0, -2031608, 0, 0, -1966074, 0, 0, -1966073, 0, 0, -1966072, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -261, 314 )
@@ -1077,12 +1079,15 @@ polygon = PoolVector2Array( 753, 18, 751, 34, 782, 35, 800, 19, 788, 6, 835, -90
 
 [node name="SimpleDoor2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 183, -540 )
-level = "3_2"
-spawnPoint = 4
+script = ExtResource( 23 )
 
 [node name="Sign" parent="." instance=ExtResource( 18 )]
 position = Vector2( 122, -506 )
 signtext = "Area Opening Soon!"
+
+[node name="Sign2" parent="." instance=ExtResource( 18 )]
+position = Vector2( 107, -877 )
+signtext = "Landing Site - 1 mile South"
 
 [node name="MetalSpike" parent="." instance=ExtResource( 19 )]
 position = Vector2( -136, -1072 )
