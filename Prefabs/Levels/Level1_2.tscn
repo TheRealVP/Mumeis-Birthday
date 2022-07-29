@@ -179,6 +179,9 @@ position = Vector2( -25, 134 )
 [node name="exitpoint2" type="Position2D" parent="."]
 position = Vector2( -176, -28 )
 
+[node name="exitpoint1" type="Position2D" parent="."]
+position = Vector2( 139, 138 )
+
 [connection signal="body_entered" from="SecretArea" to="SecretArea" method="_on_SecretArea_body_entered"]
 [connection signal="body_entered" from="zetanote" to="zetanote" method="_on_zetanote_body_entered"]
 [connection signal="body_exited" from="zetanote" to="zetanote" method="_on_zetanote_body_exited"]

@@ -350,4 +350,4 @@ script = ExtResource( 11 )
 [node name="Sign3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1369, 437 )
 z_index = 4
-signtext = "Anon's 1st Level"
+signtext = "DO's Submission"
