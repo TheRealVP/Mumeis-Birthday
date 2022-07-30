@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Prefabs/Levels/backgroundforall.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Prefabs/Door/BonusLevel2Door.gd" type="Script" id=10]
 [ext_resource path="res://Prefabs/Door/BonusLevel3Door.gd" type="Script" id=11]
 [ext_resource path="res://3 - Background and Tiles/tilesettrans.png" type="Texture" id=12]
+[ext_resource path="res://Prefabs/Hazards/FakeBlock.tscn" type="PackedScene" id=13]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=14]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
@@ -199,5 +200,41 @@ shape = SubResource( 48 )
 position = Vector2( 192, 164 )
 z_index = -1
 script = ExtResource( 11 )
+
+[node name="FakeBlock" parent="." instance=ExtResource( 13 )]
+position = Vector2( 832, 192 )
+
+[node name="FakeBlock2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 864, 192 )
+
+[node name="FakeBlock3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 912, 192 )
+
+[node name="FakeBlock4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 928, 192 )
+
+[node name="FakeBlock5" parent="." instance=ExtResource( 13 )]
+position = Vector2( 944, 192 )
+
+[node name="FakeBlock6" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1008, 192 )
+
+[node name="FakeBlock7" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1024, 192 )
+
+[node name="FakeBlock8" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1040, 192 )
+
+[node name="FakeBlock9" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1056, 192 )
+
+[node name="FakeBlock10" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1072, 192 )
+
+[node name="FakeBlock11" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1088, 192 )
+
+[node name="FakeBlock12" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1376, 176 )
 
 [connection signal="body_entered" from="SecretArea" to="SecretArea" method="_on_SecretArea_body_entered"]
