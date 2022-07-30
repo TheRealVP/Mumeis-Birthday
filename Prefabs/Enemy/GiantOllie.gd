@@ -75,10 +75,7 @@ func onDestroyed():
 	get_tree().get_root().add_child(coin)
 
 func fire():
-	$SFX.stream= lazorfx
-	$SFX.play()
-	yield(get_tree().create_timer(0.7),"timeout")
-	$SFX.stop()
+	
 	var bullet= BULLET_SCENE.instance()
 	var bullet2= BULLET_SCENE.instance()
 	
@@ -96,6 +93,10 @@ func fire():
 
 	get_parent().add_child(bullet)
 	get_parent().add_child(bullet2)
+	$SFX.stream= lazorfx
+	$SFX.play()
+	yield(get_tree().create_timer(0.7),"timeout")
+	$SFX.stop()
 
 
 func _on_Timer_timeout():
