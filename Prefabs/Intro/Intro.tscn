@@ -217,8 +217,8 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ "It appeared to be a normal day in
-the Hololive World... As during
-every other day, Mumei was doing 
+the Hololive World... As with
+every other day, Mumei went on 
 her trips to guard Civilization.", "For reasons only a Guardian of
  Civilization as she could fathom, 
 she put a lot of importance in the 
@@ -230,7 +230,7 @@ about... SUDDENLY!", "... It seemed like an eternity had
 passed since Kronii cast her
 spell. Mumei awoke, again and
 again inside her Bunkeronii,
-imprisoned by reasons she 
+imprisoned for reasons she 
 did not understand." ]
 }
 tracks/3/type = "value"
@@ -385,19 +385,14 @@ tracks/14/keys = {
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 4 ), ExtResource( 22 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 23 ) ],
+"loop": false,
+"name": "Sword",
+"speed": 15.0
+}, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 21 ), ExtResource( 3 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "DoubleJump",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 27 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "Swoop",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 25 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 13 ) ],
-"loop": false,
-"name": "Jump",
 "speed": 20.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 3 ) ],
@@ -410,15 +405,20 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 6 ), ExtResource( 25 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 20.0
+}, {
 "frames": [ ExtResource( 26 ), ExtResource( 2 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 20 ), ExtResource( 1 ), ExtResource( 24 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 16.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 4 ), ExtResource( 22 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 23 ) ],
-"loop": false,
-"name": "Sword",
-"speed": 15.0
+"frames": [ ExtResource( 27 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Swoop",
+"speed": 10.0
 } ]
 
 [sub_resource type="SpriteFrames" id=7]
@@ -452,16 +452,16 @@ anims/RESET = SubResource( 3 )
 anims/part1 = SubResource( 2 )
 
 [node name="anim" type="AnimatedSprite" parent="."]
-position = Vector2( 430, 468 )
+position = Vector2( 0, 468 )
 scale = Vector2( 0.446474, 0.458013 )
 frames = SubResource( 1 )
-animation = "Idle"
+animation = "Walk"
 frame = 1
 playing = true
 flip_h = true
 
 [node name="kronii" type="AnimatedSprite" parent="."]
-position = Vector2( 823, 330 )
+position = Vector2( 1149, 108 )
 scale = Vector2( 0.195313, 0.196094 )
 frames = SubResource( 7 )
 frame = 2
