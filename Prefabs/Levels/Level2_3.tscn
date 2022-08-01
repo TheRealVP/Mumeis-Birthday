@@ -111,55 +111,58 @@ scale = Vector2( 0.35, 0.35 )
 z_index = -1
 
 [node name="Crates" parent="." instance=ExtResource( 3 )]
-position = Vector2( -286, 253 )
+position = Vector2( -286, 254 )
 
 [node name="Crates2" parent="." instance=ExtResource( 3 )]
-position = Vector2( -286, 216 )
+position = Vector2( -286, 220 )
 
 [node name="Crates3" parent="." instance=ExtResource( 3 )]
-position = Vector2( -286, 179 )
+position = Vector2( -286, 185 )
 
 [node name="Crates13" parent="." instance=ExtResource( 3 )]
 position = Vector2( 288, 254 )
 
 [node name="Crates14" parent="." instance=ExtResource( 3 )]
-position = Vector2( 288, 217 )
+position = Vector2( 288, 219 )
 
 [node name="Crates15" parent="." instance=ExtResource( 3 )]
-position = Vector2( 288, 180 )
+position = Vector2( 288, 183 )
 
 [node name="Crates4" parent="." instance=ExtResource( 3 )]
-position = Vector2( -53, 254 )
+position = Vector2( -50, 254 )
 
 [node name="Crates5" parent="." instance=ExtResource( 3 )]
-position = Vector2( -52, 215 )
+position = Vector2( -50, 218 )
 
 [node name="Crates6" parent="." instance=ExtResource( 3 )]
-position = Vector2( -50, 177 )
+position = Vector2( -50, 181 )
 
 [node name="Crates7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 46, 253 )
+position = Vector2( 49, 253 )
 
 [node name="Crates8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 45, 214 )
+position = Vector2( 48, 218 )
 
 [node name="Crates9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 45, 177 )
+position = Vector2( 48, 180 )
 
 [node name="Crates10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 81, 177 )
+position = Vector2( 81, 180 )
 
 [node name="Crates11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 82, 215 )
+position = Vector2( 82, 218 )
 
 [node name="Crates12" parent="." instance=ExtResource( 3 )]
 position = Vector2( 82, 253 )
 
 [node name="Crates16" parent="." instance=ExtResource( 3 )]
-position = Vector2( 114, 177 )
+position = Vector2( 114, 180 )
 
 [node name="Crates17" parent="." instance=ExtResource( 3 )]
-position = Vector2( 115, 215 )
+position = Vector2( 115, 218 )
 
 [node name="Crates18" parent="." instance=ExtResource( 3 )]
 position = Vector2( 115, 253 )
+
+[node name="exitpoint1" type="Position2D" parent="."]
+position = Vector2( -130, 248 )

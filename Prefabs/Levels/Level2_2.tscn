@@ -146,6 +146,7 @@ scale = Vector2( 2.2, 2.2 )
 position = Vector2( 185, 244 )
 level = "2_3"
 open = true
+spawnPoint = 1
 
 [node name="Sign" parent="." instance=ExtResource( 3 )]
 position = Vector2( 130, 219 )
