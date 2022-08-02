@@ -10,7 +10,8 @@ extends Node2D
 func _ready():
 	$AnimationPlayer.play("part1")
 	yield(get_node("AnimationPlayer"), "animation_finished")
-	MusicController.play_exploration_theme() # Replace with function body.
+	MusicController.play_exploration_theme() 
+	PlayerVariables.game_started=true
 	PlayerVariables.goto_scene("res://Prefabs/Levels/Level0.tscn" )
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -24,7 +24,11 @@ func _on_Button_pressed():
 		PlayerVariables.set_exit_point(2)
 		PlayerVariables.goto_scene("res://Prefabs/Levels/Level3_6.tscn" )
 	elif(PlayerVariables.checkpoint_reached==false):
-		PlayerVariables.goto_scene("res://Prefabs/Intro/Intro.tscn");
+		if (PlayerVariables.game_started == false):
+			PlayerVariables.goto_scene("res://Prefabs/Intro/Intro.tscn");
+		else:
+			MusicController.play_exploration_theme() 
+			PlayerVariables.goto_scene("res://Prefabs/Levels/Level0.tscn" )
 	else:
 		MusicController.play_exploration_theme()
 		PlayerVariables.goto_scene("res://Prefabs/Levels/Level3_3.tscn" )

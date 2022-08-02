@@ -6,6 +6,7 @@ var current_scene = null
 var exit_point = 0
 var bonus0completed = false
 var main_room_key = false
+var game_started = false
 var checkpoint_reached = false
 var anewstart_reached = false
 var red_memory_found = false
