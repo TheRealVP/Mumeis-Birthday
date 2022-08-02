@@ -153,7 +153,9 @@ margin_right = 1021.0
 margin_bottom = 544.0
 custom_fonts/font = SubResource( 1 )
 text = "Oh, and use the left and right arrow keys to move
- left and right."
+ left and right. Up arrow to enter doors. If you get
+stuck, Press R.. You'll end up with only a tiny bit of
+health though!"
 
 [node name="Jump72" type="Sprite" parent="."]
 position = Vector2( 937, 351 )

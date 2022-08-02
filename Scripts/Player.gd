@@ -34,12 +34,15 @@ func _ready():
 func _process(delta):
 	#RESTART
 	if Input.is_action_just_pressed("restart"):
+		print(get_tree().get_current_scene().filename)
+		
 		yield(get_tree().create_timer(5),"timeout")
 		PlayerVariables.set_lives(0.5)
 		PlayerVariables.set_berries(coinNumber)
 		#if spawnPoint>0:
 
-		get_tree().reload_current_scene() 
+		PlayerVariables.goto_scene(get_tree().get_current_scene().filename)
+ 
 	#BASIC MOVEMENT
 	var movement = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	if movement != 0 and canSlash==false:
