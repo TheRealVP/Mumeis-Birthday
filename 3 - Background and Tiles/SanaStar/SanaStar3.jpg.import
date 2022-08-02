@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/door1.png-7a785495e5f13643f57aa04be237baed.stex"
+path="res://.import/SanaStar3.jpg-3ac6173317322d808268338948fe8f9a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://3 - Background and Tiles/Objects/door1.png"
-dest_files=[ "res://.import/door1.png-7a785495e5f13643f57aa04be237baed.stex" ]
+source_file="res://3 - Background and Tiles/SanaStar/SanaStar3.jpg"
+dest_files=[ "res://.import/SanaStar3.jpg-3ac6173317322d808268338948fe8f9a.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

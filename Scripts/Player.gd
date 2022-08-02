@@ -187,9 +187,9 @@ func hurt(damage):
 			velocity.y=-73
 			velocity.x=-53 #these two were flipped
 			
-func coinPickUp():
+func coinPickUp(value):
 	
-	coinNumber+=1
+	coinNumber+=value
 	PlayerVariables.set_berries(coinNumber)
 
 func keyPickUpMainDoor1():
