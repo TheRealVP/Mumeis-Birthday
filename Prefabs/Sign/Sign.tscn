@@ -31,6 +31,8 @@ margin_top = -30.0
 margin_right = 101.0
 margin_bottom = -6.0
 size_flags_horizontal = 5
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 align = 1
 

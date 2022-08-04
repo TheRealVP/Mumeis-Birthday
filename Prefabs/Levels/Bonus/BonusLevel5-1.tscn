@@ -830,7 +830,7 @@ position = Vector2( 416, 72 )
 scale = Vector2( 0.170833, 0.170833 )
 z_index = -4
 frames = SubResource( 126 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
