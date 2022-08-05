@@ -90,7 +90,9 @@ func _process(delta):
 		$Swoopzone/CollisionShape2D.disabled= true
 	if !is_on_floor() and Input.is_action_just_pressed("ui_accept")  and jumpCount<2:
 		jumpCount+=1
-		velocity.y -=clamp(velocity.y, jump, jump)
+		velocity.y =-200
+		#clamp(velocity.y, jump, jump)
+		print(velocity.y)
 		#$anim.play("Jump")
 
 	
