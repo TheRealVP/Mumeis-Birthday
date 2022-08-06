@@ -190,10 +190,10 @@ func hurt(damage):
 		add_child(red)
 		if lives <=0 :
 			PlayerVariables.goto_scene("res://Prefabs/Menus/GameOver.tscn" )
-	if velocity.x >=0:
+	if velocity.x >=0 and caffeine==0:
 		velocity.y=-73
 		velocity.x=53 #these two were flipped
-	elif velocity.x<=0:
+	elif velocity.x<=0 and caffeine==0:
 		velocity.y=-73
 		velocity.x=-53 #these two were flipped
 			
