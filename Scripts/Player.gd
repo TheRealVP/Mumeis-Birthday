@@ -3,7 +3,7 @@ extends KinematicBody2D
 var velocity = Vector2.ZERO
 var speed = 150
 var maxSpeed = 300
-var jump = 150
+var jump = 180
 var jumpCount = 0
 var wallJump =  -80
 var gravity = 300
@@ -13,6 +13,8 @@ var hitfx = load("res://Sounds/hit.wav")
 var swoopfx = load("res://Sounds/swoop.wav")
 
 const FRICTION = 0.70
+
+onready var flicker = $Flick
 
 export (PackedScene) var hurtScreen
 
@@ -90,7 +92,7 @@ func _process(delta):
 		$Swoopzone/CollisionShape2D.disabled= true
 	if !is_on_floor() and Input.is_action_just_pressed("ui_accept")  and jumpCount<2:
 		jumpCount+=1
-		velocity.y =-200
+		velocity.y =-220
 		#clamp(velocity.y, jump, jump)
 		print(velocity.y)
 		#$anim.play("Jump")
@@ -176,21 +178,24 @@ func play_swoop():
 	$SFX.play()
 
 func hurt(damage):
-	if caffeine >= 1:
-		pass
-	else:
+	if caffeine == 0:
 		play_hurt()
+		
+		#added some mercy frames so you don't get bumrushed by big ollie
+		caffeine = 1
+		flicker.play("Flicker")
+		
 		lives -=damage
 		var red = hurtScreen.instance()
 		add_child(red)
 		if lives <=0 :
 			PlayerVariables.goto_scene("res://Prefabs/Menus/GameOver.tscn" )
-		if velocity.x >=0:
-			velocity.y=-73
-			velocity.x=53 #these two were flipped
-		elif velocity.x<=0:
-			velocity.y=-73
-			velocity.x=-53 #these two were flipped
+	if velocity.x >=0:
+		velocity.y=-73
+		velocity.x=53 #these two were flipped
+	elif velocity.x<=0:
+		velocity.y=-73
+		velocity.x=-53 #these two were flipped
 			
 func coinPickUp(value):
 	
@@ -217,6 +222,10 @@ func placeRedMemory():
 	
 func placeBlueMemory():
 	PlayerVariables.blue_memory_placed = true
+
+#resets the invulnerability frames from getting hit
+func done_flickering():
+	caffeine = 0
 
 func _on_anim_animation_finished():
 	if $anim.animation == "Sword":
