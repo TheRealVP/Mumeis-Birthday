@@ -4,6 +4,7 @@ extends Node
 var main_menu_theme =load("res://Sounds/Mumei_Game_BGM_Main_Theme.mp3")
 var exploration_theme= load("res://Sounds/Mumei_Game_BGM_Exploration_Theme.mp3")
 var ending_theme= load("res://Sounds/Mumei_Game_BGM_Ending_Theme.mp3")
+var sana_theme = load( "res://Sounds/Mumei_Game_BGM_Sana_Theme.mp3" )
 var boss_theme= load("res://Sounds/Mumei_Game_BGM_Boss_Theme.mp3")
 # Declare member variables here. Examples:
 # var a = 2
@@ -25,6 +26,9 @@ func play_exploration_theme():
 	$Music.play()
 func play_ending_theme():
 	$Music.stream = ending_theme
+	$Music.play()
+func play_sana_theme():
+	$Music.stream = sana_theme
 	$Music.play()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

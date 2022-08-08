@@ -1173,7 +1173,7 @@ script = ExtResource( 23 )
 
 [node name="Sign" parent="." instance=ExtResource( 18 )]
 position = Vector2( 122, -506 )
-signtext = "Area Opening Soon! (You will not be able to return, enter only for the challenge)"
+signtext = "Landing Site! One-way only!\\nBeware the lava!"
 
 [node name="Sign2" parent="." instance=ExtResource( 18 )]
 position = Vector2( 107, -877 )

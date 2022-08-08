@@ -136,8 +136,8 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 1, 0.0196078, 0.0196078, 1 )
 custom_styles/fg = SubResource( 48 )
 custom_styles/bg = SubResource( 49 )
-max_value = 15.0
-value = 15.0
+max_value = 10.0
+value = 10.0
 percent_visible = false
 
 [node name="Label" type="Label" parent="GUI"]
