@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Prefabs/Levels/tilesetforall.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Sign/Sign.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Door/SimpleDoor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Coin/Coin.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scripts/Level1_1.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/Levels/backgroundforall.tres" type="TileSet" id=7]
 [ext_resource path="res://Prefabs/Lever/Lever.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Door/TutorialDoor.gd" type="Script" id=9]
@@ -16,7 +15,6 @@
 
 [node name="Level2_3" type="Node2D"]
 position = Vector2( 312, 214 )
-script = ExtResource( 6 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -264, 253 )

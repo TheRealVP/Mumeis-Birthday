@@ -1,11 +1,10 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Prefabs/Levels/tilesetforall.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Sign/Sign.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Bird/Bird.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Coffee/Coffee.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scripts/Level1_1.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/Levels/backgroundforall.tres" type="TileSet" id=7]
 [ext_resource path="res://5 - Hazards/MetalSpike/MetalSpike.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Crates/Crates.tscn" type="PackedScene" id=9]
@@ -18,7 +17,7 @@
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=17]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 12.2851, 15.5381, 3.63351, 15.5381, 3.63351, 0, 12.2851, 0 )
 
 [sub_resource type="TileSet" id=2]
@@ -32,21 +31,20 @@ points = PoolVector2Array( 12.2851, 15.5381, 3.63351, 15.5381, 3.63351, 0, 12.28
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 1 )
+0/shape = SubResource( 3 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
 
 [node name="Level2_3" type="Node2D"]
 position = Vector2( 312, 214 )
-script = ExtResource( 6 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -264, 253 )
@@ -126,11 +124,11 @@ tile_data = PoolIntArray( -458790, 22, 0, -458789, 22, 0, -458788, 22, 0, -45878
 
 [node name="Sign" parent="." instance=ExtResource( 3 )]
 position = Vector2( -224, 248 )
-signtext = "Double Tap Space as fast as you can!"
+signtext = "Maximize your double jump by double-jumping\\n at the highest point!"
 
 [node name="Sign2" parent="." instance=ExtResource( 3 )]
 position = Vector2( -169, 122 )
-signtext = "Jump and Press Ctrl for a Swoop Attack! Direct it Left or Right!"
+signtext = "Jump and Press Ctrl for a Swoop Attack!\\n Direct it Left or Right!"
 
 [node name="Sign3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 226, 210 )
