@@ -14,6 +14,7 @@ func _ready():
 		
 func _process(delta):
 	$coinText.text = String(player.coinNumber)
+	$basket.text = String(PlayerVariables.baskets)
 	
 	for heart in $Heart.get_children():
 		var index = heart.get_index()

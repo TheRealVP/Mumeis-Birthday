@@ -781,7 +781,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 8/z_index = 0
 
-[sub_resource type="Shader" id=127]
+[sub_resource type="Shader" id=129]
 code = "
 // HSV to RBG from https://www.rapidtables.com/convert/color/hsv-to-rgb.html
 // Rotation matrix from https://en.wikipedia.org/wiki/Rotation_matrix
@@ -819,7 +819,7 @@ void fragment() {
 "
 
 [sub_resource type="ShaderMaterial" id=128]
-shader = SubResource( 127 )
+shader = SubResource( 129 )
 shader_param/strength = 0.275
 shader_param/speed = 1.43
 shader_param/angle = 169.412
@@ -831,7 +831,6 @@ position = Vector2( 416, 72 )
 scale = Vector2( 0.170833, 0.170833 )
 z_index = -4
 frames = SubResource( 126 )
-frame = 2
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 5 )]

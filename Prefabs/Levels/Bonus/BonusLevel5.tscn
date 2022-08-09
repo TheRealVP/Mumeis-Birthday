@@ -715,16 +715,6 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 hframes = 5
 
-[node name="coinText" type="Label" parent="GUI"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -97.0
-margin_top = 34.0
-margin_right = -57.0
-margin_bottom = 48.0
-text = "0"
-align = 2
-
 [node name="FogController" parent="GUI" instance=ExtResource( 4 )]
 position = Vector2( 2826, -1004 )
 rotation = -4.09454
@@ -741,6 +731,37 @@ scale = Vector2( 0.1, 1 )
 [node name="FogController4" parent="GUI" instance=ExtResource( 4 )]
 position = Vector2( 2488, -2064 )
 scale = Vector2( 0.1, 1 )
+
+[node name="coinText" type="Label" parent="GUI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -125.0
+margin_top = 34.0
+margin_right = -85.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( -663, 207 )
+text = "0"
+align = 2
+
+[node name="slash" type="Label" parent="GUI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -118.0
+margin_top = 34.0
+margin_right = -78.0
+margin_bottom = 48.0
+text = "/"
+align = 2
+
+[node name="basket" type="Label" parent="GUI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -103.0
+margin_top = 34.0
+margin_right = -63.0
+margin_bottom = 48.0
+text = "0"
+align = 2
 
 [node name="Stuff" type="Node2D" parent="."]
 position = Vector2( -160, 96 )

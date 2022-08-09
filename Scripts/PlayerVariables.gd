@@ -2,6 +2,7 @@ extends Node
 
 var lives = 3
 var berries = 0
+var baskets = 10
 var current_scene = null
 var exit_point = 0
 var bonus0completed = false
@@ -54,7 +55,13 @@ func set_lives(newLives):
 	lives = newLives
 	
 func set_berries(newBerries):
-	berries =newBerries
+	if newBerries <=baskets:
+		berries =newBerries
+	else:
+		berries= baskets
+		
+func add_baskets():
+	baskets +=5;
 	
 func set_exit_point(point):
 	exit_point=point

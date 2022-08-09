@@ -180,7 +180,12 @@ func play_swoop():
 func hurt(damage):
 	if caffeine == 0:
 		play_hurt()
-		
+		if velocity.x >=0:
+			velocity.y=-73
+			velocity.x=53 #these two were flipped
+		elif velocity.x<=0:
+			velocity.y=-73
+			velocity.x=-53 #these two were flipped
 		#added some mercy frames so you don't get bumrushed by big ollie
 		caffeine = 1
 		flicker.play("Flicker")
@@ -190,16 +195,12 @@ func hurt(damage):
 		add_child(red)
 		if lives <=0 :
 			PlayerVariables.goto_scene("res://Prefabs/Menus/GameOver.tscn" )
-	if velocity.x >=0 and caffeine==0:
-		velocity.y=-73
-		velocity.x=53 #these two were flipped
-	elif velocity.x<=0 and caffeine==0:
-		velocity.y=-73
-		velocity.x=-53 #these two were flipped
 			
 func coinPickUp(value):
 	
 	coinNumber+=value
+	if(coinNumber>PlayerVariables.baskets):
+		coinNumber=PlayerVariables.baskets
 	PlayerVariables.set_berries(coinNumber)
 
 func keyPickUpMainDoor1():

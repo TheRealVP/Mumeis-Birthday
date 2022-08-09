@@ -31,11 +31,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 8 ) ],
-"loop": false,
-"name": "Sword",
-"speed": 15.0
-}, {
 "frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 11 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "DoubleJump",
@@ -65,6 +60,11 @@ animations = [ {
 "loop": true,
 "name": "Fall",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "Sword",
+"speed": 15.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]

@@ -75,9 +75,30 @@ hframes = 5
 [node name="coinText" type="Label" parent="GUI"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -97.0
+margin_left = -125.0
 margin_top = 34.0
-margin_right = -57.0
+margin_right = -85.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( -663, 207 )
+text = "0"
+align = 2
+
+[node name="slash" type="Label" parent="GUI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -118.0
+margin_top = 34.0
+margin_right = -78.0
+margin_bottom = 48.0
+text = "/"
+align = 2
+
+[node name="basket" type="Label" parent="GUI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -103.0
+margin_top = 34.0
+margin_right = -63.0
 margin_bottom = 48.0
 text = "0"
 align = 2
