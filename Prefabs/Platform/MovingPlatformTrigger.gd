@@ -6,19 +6,21 @@ export var length = Vector2()
 
 var moving = false
 var triggered = false
-var repeat = false
+var pos = 1
+var stop = false
+
 
 func _process(_delta):
-	if moving == false and triggered == true:
-		move()
+	if stop == true:
+		pass
+	elif triggered == false:
+		pass
+	elif moving == false:
+		move_platform()
 		moving = true
-	elif repeat == true:
-		move()
-		moving = true
-		repeat = false
 
 
-func move():
+func move_platform():
 	$Tween.interpolate_property(
 		self,
 		"position",
@@ -29,20 +31,29 @@ func move():
 		Tween.EASE_IN_OUT
 	)
 	$Tween.start()
+	pos *= -1
 	
 
-
 func _on_Tween_tween_completed(object, _key):
-	length*=-1 # Replace with function body.
-	repeat = true
-
-func _on_Area2D_body_entered(_body):
-	triggered = true
-
-
-func _on_Area2D_body_exited(_body):
-	triggered = false
+	if stop == false:
+		length *= -1 
+		moving = false
+		if pos == 1:
+			triggered = false
 
 
-func _on_Tween_tween_all_completed():
-	moving = false
+func _on_Area2D_body_entered(body):
+	if body.has_method("move_platform"):
+		pass
+	else:
+		triggered = true
+		print(body)
+		if body.is_in_group("Rat"):
+			move_platform()
+			stop = true
+			print("rrrrrrat")
+
+
+
+
+
