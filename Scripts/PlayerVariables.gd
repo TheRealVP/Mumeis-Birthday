@@ -2,7 +2,7 @@ extends Node
 
 var lives = 3
 var berries = 0
-var baskets = 10
+var baskets = 9
 var current_scene = null
 var exit_point = 0
 var baskets_found = []
@@ -63,7 +63,7 @@ func set_berries(newBerries):
 		
 func add_baskets(area):
 	baskets_found.append(area)
-	baskets +=5;
+	baskets +=3;
 	
 func find_basket(value):
 	if baskets_found.find(value) != -1:

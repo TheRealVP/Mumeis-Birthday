@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Prefabs/Levels/tilesetforall.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scripts/Level1_1.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/Levels/backgroundforall.tres" type="TileSet" id=7]
 [ext_resource path="res://Prefabs/Nightmare/Nightmare.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Basket/BasketSpawn.tscn" type="PackedScene" id=9]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=14]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
@@ -187,3 +188,7 @@ position = Vector2( 115, 253 )
 
 [node name="exitpoint1" type="Position2D" parent="."]
 position = Vector2( -130, 248 )
+
+[node name="BasketSpawn" parent="." instance=ExtResource( 9 )]
+position = Vector2( 240, 254 )
+value = 4

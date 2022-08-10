@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=1]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Basket/BasketSpawn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=5]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=7]
@@ -713,5 +714,9 @@ position = Vector2( 28, 722 )
 
 [node name="pathPoint10" parent="." groups=["Pathpoint"] instance=ExtResource( 15 )]
 position = Vector2( 84, 722 )
+
+[node name="BasketSpawn" parent="." instance=ExtResource( 3 )]
+position = Vector2( -233, 535 )
+value = 2
 
 [connection signal="is_triggered" from="Stuff/Lever" to="Stuff/SimpleDoor2" method="_on_Lever_is_triggered"]

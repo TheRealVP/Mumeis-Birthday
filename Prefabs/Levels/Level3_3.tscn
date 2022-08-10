@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://3 - Background and Tiles/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://3 - Background and Tiles/ForgottenDungeon.png" type="Texture" id=7]
 [ext_resource path="res://Prefabs/Coin/Coin.tscn" type="PackedScene" id=8]
 [ext_resource path="res://6 - UI/JungleAdventurer.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Prefabs/Basket/BasketSpawn.tscn" type="PackedScene" id=10]
 [ext_resource path="res://6 - UI/MumeiHead.png" type="Texture" id=14]
 [ext_resource path="res://4 - Coin and pickup/berry.png" type="Texture" id=15]
 [ext_resource path="res://6 - UI/HeartSpriteSheetl.png" type="Texture" id=16]
@@ -508,3 +509,7 @@ percent_visible = 0.0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CheckPoint"]
 anims/RESET = SubResource( 51 )
 anims/play = SubResource( 52 )
+
+[node name="BasketSpawn" parent="." instance=ExtResource( 10 )]
+position = Vector2( 157, 115 )
+value = 5
