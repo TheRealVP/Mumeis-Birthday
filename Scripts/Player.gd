@@ -7,6 +7,7 @@ var jump = 180
 var jumpCount = 0
 var wallJump =  -80
 var gravity = 300
+
 var swing = load("res://Sounds/swing3.wav")
 var jumpfx = load("res://Sounds/jump1.wav")
 var hitfx = load("res://Sounds/hit.wav")
@@ -202,6 +203,10 @@ func coinPickUp(value):
 	if(coinNumber>PlayerVariables.baskets):
 		coinNumber=PlayerVariables.baskets
 	PlayerVariables.set_berries(coinNumber)
+	
+func basketPickUp(val):
+
+	PlayerVariables.add_baskets(val)
 
 func keyPickUpMainDoor1():
 	PlayerVariables.main_room_key=true

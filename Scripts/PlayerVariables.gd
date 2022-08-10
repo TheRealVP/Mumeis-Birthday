@@ -5,6 +5,7 @@ var berries = 0
 var baskets = 10
 var current_scene = null
 var exit_point = 0
+var baskets_found = []
 var bonus0completed = false
 var main_room_key = false
 var game_started = false
@@ -60,8 +61,15 @@ func set_berries(newBerries):
 	else:
 		berries= baskets
 		
-func add_baskets():
+func add_baskets(area):
+	baskets_found.append(area)
 	baskets +=5;
+	
+func find_basket(value):
+	if baskets_found.find(value) != -1:
+		return true
+	else:
+		return false
 	
 func set_exit_point(point):
 	exit_point=point
